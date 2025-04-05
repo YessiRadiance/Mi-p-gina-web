@@ -29,6 +29,33 @@
     .boton-compra:hover {
       background-color: #e89db8;
     }
+
+    /* Estilo de los productos */
+    #productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .producto {
+      width: 160px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Media Query para pantallas pequeñas (móviles) */
+    @media (max-width: 768px) {
+      #productos {
+        flex-direction: column; /* Cambiar a una sola columna */
+        align-items: center;
+      }
+
+      .producto {
+        width: 90%; /* Ancho ajustado para que ocupe la mayoría de la pantalla */
+      }
+    }
   </style>
 
   <!-- AOS para animaciones -->
@@ -54,17 +81,17 @@
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
 
         <!-- Producto 1 -->
-        <div style="width: 160px; text-align: center;" data-aos="fade-up">
+        <div class="producto" data-aos="fade-up">
           <img src="producto1.jpg" alt="Producto 1" style="width: 100%; border-radius: 12px;">
           <h3>Producto 1</h3>
           <p>$11.00</p>
-          <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20 Producto.%201" target="_blank">
+          <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto.%201" target="_blank">
             <button class="boton-compra">Comprar</button>
           </a>
         </div>
 
         <!-- Producto 2 -->
-        <div style="width: 160px; text-align: center;" data-aos="fade-up">
+        <div class="producto" data-aos="fade-up">
           <img src="producto2.jpg" alt="Producto 2" style="width: 100%; border-radius: 12px;">
           <h3>Producto 2</h3>
           <p>$12.00</p>
@@ -73,8 +100,48 @@
           </a>
         </div>
 
-        <!-- Puedes seguir copiando y cambiando nombre, imagen, precio y número -->
-        
+        <!-- Producto 3 -->
+        <div class="producto" data-aos="fade-up">
+          <img src="producto3.jpg" alt="Producto 3" style="width: 100%; border-radius: 12px;">
+          <h3>Producto 3</h3>
+          <p>$13.00</p>
+          <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%203" target="_blank">
+            <button class="boton-compra">Comprar</button>
+          </a>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="producto" data-aos="fade-up">
+          <img src="producto4.jpg" alt="Producto 4" style="width: 100%; border-radius: 12px;">
+          <h3>Producto 4</h3>
+          <p>$14.00</p>
+          <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%204" target="_blank">
+            <button class="boton-compra">Comprar</button>
+          </a>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="producto" data-aos="fade-up">
+          <img src="producto5.jpg" alt="Producto 5" style="width: 100%; border-radius: 12px;">
+          <h3>Producto 5</h3>
+          <p>$15.00</p>
+          <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%205" target="_blank">
+            <button class="boton-compra">Comprar</button>
+          </a>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="producto" data-aos="fade-up">
+          <img src="producto6.jpg" alt="Producto 6" style="width: 100%; border-radius: 12px;">
+          <h3>Producto 6</h3>
+          <p>$16.00</p>
+          <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%206" target="_blank">
+            <button class="boton-compra">Comprar</button>
+          </a>
+        </div>
+
+        <!-- Agrega más productos si lo deseas -->
+
       </div>
     </section>
   </main>
