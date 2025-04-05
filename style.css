@@ -1,10 +1,8 @@
-/* Fondo general con un degradado suave */
 body {
-  background: linear-gradient(to bottom, #fff0f5, #ffffff);
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #ffe0ec, #fff9f9);
+    color: #333;
 }
 
 /* Navegación */
