@@ -29,52 +29,6 @@
     .boton-compra:hover {
       background-color: #e89db8;
     }
-
-    /* Modal */
-    .modal {
-      display: none; /* Hidden by default */
-      position: fixed;
-      z-index: 1; /* Sit on top */
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.5); /* Faded background */
-    }
-    .modal-content {
-      background-color: white;
-      margin: 10% auto;
-      padding: 20px;
-      border-radius: 12px;
-      width: 80%;
-      max-width: 600px;
-    }
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    /* Estilo de la imagen */
-    .producto-container {
-      position: relative;
-      width: 160px;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    .producto-container img {
-      width: 100%;
-      border-radius: 12px;
-    }
   </style>
 
   <!-- AOS para animaciones -->
@@ -98,142 +52,72 @@
     <section id="productos">
       <h2 style="text-align: center;">Productos Destacados</h2>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
-
+        
         <!-- Producto 1 -->
-        <div class="producto-container" data-aos="fade-up" onclick="openModal(1)">
-          <img src="producto1.jpg" alt="Producto 1">
+        <div style="width: 160px; text-align: center;" data-aos="fade-up">
+          <img src="imagenes/producto1.jpg" alt="Producto 1" style="width: 100%; border-radius: 12px;">
           <h3>Producto 1</h3>
+          <p>$11.00</p>
+          <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto.%201" target="_blank">
+            <button class="boton-compra">Comprar</button>
+          </a>
         </div>
 
         <!-- Producto 2 -->
-        <div class="producto-container" data-aos="fade-up" onclick="openModal(2)">
-          <img src="producto2.jpg" alt="Producto 2">
+        <div style="width: 160px; text-align: center;" data-aos="fade-up">
+          <img src="imagenes/producto2.jpg" alt="Producto 2" style="width: 100%; border-radius: 12px;">
           <h3>Producto 2</h3>
+          <p>$12.00</p>
+          <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%202" target="_blank">
+            <button class="boton-compra">Comprar</button>
+          </a>
         </div>
 
         <!-- Producto 3 -->
-        <div class="producto-container" data-aos="fade-up" onclick="openModal(3)">
-          <img src="producto3.jpg" alt="Producto 3">
+        <div style="width: 160px; text-align: center;" data-aos="fade-up">
+          <img src="imagenes/producto3.jpg" alt="Producto 3" style="width: 100%; border-radius: 12px;">
           <h3>Producto 3</h3>
+          <p>$13.00</p>
+          <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%203" target="_blank">
+            <button class="boton-compra">Comprar</button>
+          </a>
         </div>
 
-          <!-- Producto 4 -->
-        <div class="producto-container" data-aos="fade-up" onclick="openModal(4)">
-          <img src="producto4.jpg" alt="Producto 4">
+        <!-- Producto 4 -->
+        <div style="width: 160px; text-align: center;" data-aos="fade-up">
+          <img src="imagenes/producto4.jpg" alt="Producto 4" style="width: 100%; border-radius: 12px;">
           <h3>Producto 4</h3>
+          <p>$14.00</p>
+          <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%204" target="_blank">
+            <button class="boton-compra">Comprar</button>
+          </a>
         </div>
 
         <!-- Producto 5 -->
-        <div class="producto-container" data-aos="fade-up" onclick="openModal(5)">
-          <img src="producto5.jpg" alt="Producto 5">
+        <div style="width: 160px; text-align: center;" data-aos="fade-up">
+          <img src="imagenes/producto5.jpg" alt="Producto 5" style="width: 100%; border-radius: 12px;">
           <h3>Producto 5</h3>
+          <p>$15.00</p>
+          <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%205" target="_blank">
+            <button class="boton-compra">Comprar</button>
+          </a>
         </div>
 
         <!-- Producto 6 -->
-        <div class="producto-container" data-aos="fade-up" onclick="openModal(6)">
-          <img src="producto6.jpg" alt="Producto 6">
+        <div style="width: 160px; text-align: center;" data-aos="fade-up">
+          <img src="imagenes/producto6.jpg" alt="Producto 6" style="width: 100%; border-radius: 12px;">
           <h3>Producto 6</h3>
+          <p>$16.00</p>
+          <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%206" target="_blank">
+            <button class="boton-compra">Comprar</button>
+          </a>
         </div>
+
+        <!-- Continúa agregando los productos 7-20 de manera similar -->
         
-            <!-- Producto 7 -->
-        <div class="producto-container" data-aos="fade-up" onclick="openModal(7)">
-          <img src="producto7.jpg" alt="Producto 7">
-          <h3>Producto 7</h3>
-        </div>
-
-        <!-- Producto 8 -->
-        <div class="producto-container" data-aos="fade-up" onclick="openModal(8)">
-          <img src="producto8.jpg" alt="Producto 8">
-          <h3>Producto 8</h3>
-        </div>
-
-        <!-- Producto 9 -->
-        <div class="producto-container" data-aos="fade-up" onclick="openModal(9)">
-          <img src="producto9.jpg" alt="Producto 9">
-          <h3>Producto 9</h3>
-        </div>
-        
-            <!-- Producto 10 -->
-        <div class="producto-container" data-aos="fade-up" onclick="openModal(10)">
-          <img src="producto10.jpg" alt="Producto 10">
-          <h3>Producto 10</h3>
-        </div>
-
-        <!-- Producto 11 -->
-        <div class="producto-container" data-aos="fade-up" onclick="openModal(11)">
-          <img src="producto11.jpg" alt="Producto 11">
-          <h3>Producto 11</h3>
-        </div>
-
-        <!-- Producto 12 -->
-        <div class="producto-container" data-aos="fade-up" onclick="openModal(12)">
-          <img src="producto12.jpg" alt="Producto 12">
-          <h3>Producto 12</h3>
-        </div>
-
-    <!-- Producto 13 -->
-        <div class="producto-container" data-aos="fade-up" onclick="openModal(13)">
-          <img src="producto13.jpg" alt="Producto 13">
-          <h3>Producto 13</h3>
-        </div>
-
-        <!-- Producto 14 -->
-        <div class="producto-container" data-aos="fade-up" onclick="openModal(14)">
-          <img src="producto14.jpg" alt="Producto 14">
-          <h3>Producto 14</h3>
-        </div>
-
-        <!-- Producto 15 -->
-        <div class="producto-container" data-aos="fade-up" onclick="openModal(15)">
-          <img src="producto15.jpg" alt="Producto 15">
-          <h3>Producto 15</h3>
-        </div>
-        
-        <!-- Más productos -->
-
       </div>
     </section>
   </main>
-
-  <!-- Modals para cada producto -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal(1)">&times;</span>
-      <h3>Producto 1</h3>
-      <img src="producto1.jpg" alt="Producto 1" style="width: 100%; border-radius: 12px;">
-      <p>$11.00</p>
-      <p>Ideal para piel seca, con ingredientes naturales que hidratan y suavizan la piel.</p>
-      <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto.%201" target="_blank">
-        <button class="boton-compra">Comprar</button>
-      </a>
-    </div>
-  </div>
-
-  <div id="modal2" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal(2)">&times;</span>
-      <h3>Producto 2</h3>
-      <img src="producto2.jpg" alt="Producto 2" style="width: 100%; border-radius: 12px;">
-      <p>$12.00</p>
-      <p>Ideal para piel mixta, ayuda a equilibrar la producción de sebo y proporciona un acabado mate.</p>
-      <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%202" target="_blank">
-        <button class="boton-compra">Comprar</button>
-      </a>
-    </div>
-  </div>
-
-  <div id="modal3" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal(3)">&times;</span>
-      <h3>Producto 3</h3>
-      <img src="producto3.jpg" alt="Producto 3" style="width: 100%; border-radius: 12px;">
-      <p>$15.00</p>
-      <p>Excelente para piel sensible, contiene ingredientes calmantes y nutritivos para una piel radiante.</p>
-      <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto.%203" target="_blank">
-        <button class="boton-compra">Comprar</button>
-      </a>
-    </div>
-  </div>
 
   <footer style="text-align: center; padding: 20px; background-color: #f8f8f8;">
     <p>&copy; 2025 Yessi Radiance. Todos los derechos reservados.</p>
@@ -261,16 +145,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-
-    // Función para abrir el modal
-    function openModal(productId) {
-      document.getElementById('modal' + productId).style.display = "block";
-    }
-
-    // Función para cerrar el modal
-    function closeModal(productId) {
-      document.getElementById('modal' + productId).style.display = "none";
-    }
   </script>
 </body>
 </html>
