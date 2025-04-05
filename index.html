@@ -1,214 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yessi Radiance</title>
-    <link rel="icon" href="yessi-logo.jpg" type="image/jpeg">
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yessi Radiance</title>
+  <link rel="icon" href="yessi-logo.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fondo y estilos básicos -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #ffe0ec, #fff9f9);
+      color: #333;
+    }
+    .boton-compra {
+      background-color: #f3c6d2;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 5px;
+    }
+    .boton-compra:hover {
+      background-color: #e89db8;
+    }
+  </style>
+
+  <!-- AOS para animaciones -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
+
 <body>
-    <header style="text-align: center;">
+  <header style="text-align: center;">
     <img src="yessi-logo.jpg" alt="Logo Yessi Radiance" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; border: 4px solid #f3c6d2; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
     <h1>Yessi Radiance</h1>
     <p>Brilla con el cuidado que tu piel merece</p>
-</header>
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-    <main>
-        <section>
-    <h2>Productos Destacados</h2>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-        <!-- Productos 1 al 27 -->
-        <!-- Puedes cambiar nombre, precio o imagen según tu catálogo -->
-        <!-- Cada producto es un bloque como este -->
-        <!-- Producto 1 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto1.jpg" alt="Producto 1" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 1</h3>
-            <p>$11.00</p>
-        </div>
-        <!-- Producto 2 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto2.jpg" alt="Producto 2" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 2</h3>
-            <p>$12.00</p>
-        </div>
-        <!-- Producto 3 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto3.jpg" alt="Producto 3" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 3</h3>
-            <p>$13.00</p>
-        </div>
-        <!-- Producto 4 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto4.jpg" alt="Producto 4" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 4</h3>
-            <p>$14.00</p>
-        </div>
-        <!-- Producto 5 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto5.jpg" alt="Producto 5" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 5</h3>
-            <p>$15.00</p>
-        </div>
-        <!-- Producto 6 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto6.jpg" alt="Producto 6" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 6</h3>
-            <p>$16.00</p>
-        </div>
-        <!-- Producto 7 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto7.jpg" alt="Producto 7" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 7</h3>
-            <p>$17.00</p>
-        </div>
-        <!-- Producto 8 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto8.jpg" alt="Producto 8" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 8</h3>
-            <p>$18.00</p>
-        </div>
-        <!-- Producto 9 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto9.jpg" alt="Producto 9" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 9</h3>
-            <p>$19.00</p>
-        </div>
-        <!-- Producto 10 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto10.jpg" alt="Producto 10" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 10</h3>
-            <p>$20.00</p>
-        </div>
-        <!-- Producto 11 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto11.jpg" alt="Producto 11" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 11</h3>
-            <p>$21.00</p>
-        </div>
-        <!-- Producto 12 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto12.jpg" alt="Producto 12" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 12</h3>
-            <p>$22.00</p>
-        </div>
-        <!-- Producto 13 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto13.jpg" alt="Producto 13" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 13</h3>
-            <p>$23.00</p>
-        </div>
-        <!-- Producto 14 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto14.jpg" alt="Producto 14" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 14</h3>
-            <p>$24.00</p>
-        </div>
-        <!-- Producto 15 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto15.jpg" alt="Producto 15" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 15</h3>
-            <p>$25.00</p>
-        </div>
-        <!-- Producto 16 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto16.jpg" alt="Producto 16" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 16</h3>
-            <p>$26.00</p>
-        </div>
-        <!-- Producto 17 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto17.jpg" alt="Producto 17" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 17</h3>
-            <p>$27.00</p>
-        </div>
-        <!-- Producto 18 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto18.jpg" alt="Producto 18" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 18</h3>
-            <p>$28.00</p>
-        </div>
-        <!-- Producto 19 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto19.jpg" alt="Producto 19" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 19</h3>
-            <p>$29.00</p>
-        </div>
-        <!-- Producto 20 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto20.jpg" alt="Producto 20" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 20</h3>
-            <p>$30.00</p>
-        </div>
-        <!-- Producto 21 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto21.jpg" alt="Producto 21" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 21</h3>
-            <p>$31.00</p>
-        </div>
-        <!-- Producto 22 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto22.jpg" alt="Producto 22" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 22</h3>
-            <p>$32.00</p>
-        </div>
-        <!-- Producto 23 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto23.jpg" alt="Producto 23" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 23</h3>
-            <p>$33.00</p>
-        </div>
-        <!-- Producto 24 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto24.jpg" alt="Producto 24" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 24</h3>
-            <p>$34.00</p>
-        </div>
-        <!-- Producto 25 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto25.jpg" alt="Producto 25" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 25</h3>
-            <p>$35.00</p>
-        </div>
-        <!-- Producto 26 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto26.jpg" alt="Producto 26" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 26</h3>
-            <p>$36.00</p>
-        </div>
-        <!-- Producto 27 -->
-        <div style="width: 160px; text-align: center;">
-            <img src="producto27.jpg" alt="Producto 27" style="width: 100%; border-radius: 12px;">
-            <h3>Producto 27</h3>
-            <p>$37.00</p>
-        </div>
-    </div>
-</section>
-    </main>
- <footer style="text-align: center; padding: 20px; background-color: #f8f8f8;">
-    <p>&copy; 2025 Yessi Radiance. Todos los derechos reservados.</p>
+  </header>
 
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main>
+    <section id="productos">
+      <h2 style="text-align: center;">Productos Destacados</h2>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
+
+        <!-- Producto 1 -->
+        <div style="width: 160px; text-align: center;" data-aos="fade-up">
+          <img src="producto1.jpg" alt="Producto 1" style="width: 100%; border-radius: 12px;">
+          <h3>Producto 1</h3>
+          <p>$11.00</p>
+          <a href="https://wa.me/57TU_NUMERO?text=Hola%2C%20quiero%20comprar%20el%20Producto%201" target="_blank">
+            <button class="boton-compra">Comprar</button>
+          </a>
+        </div>
+
+        <!-- Producto 2 -->
+        <div style="width: 160px; text-align: center;" data-aos="fade-up">
+          <img src="producto2.jpg" alt="Producto 2" style="width: 100%; border-radius: 12px;">
+          <h3>Producto 2</h3>
+          <p>$12.00</p>
+          <a href="https://wa.me/57TU_NUMERO?text=Hola%2C%20quiero%20comprar%20el%20Producto%202" target="_blank">
+            <button class="boton-compra">Comprar</button>
+          </a>
+        </div>
+
+        <!-- Puedes seguir copiando y cambiando nombre, imagen, precio y número -->
+        
+      </div>
+    </section>
+  </main>
+
+  <footer style="text-align: center; padding: 20px; background-color: #f8f8f8;">
+    <p>&copy; 2025 Yessi Radiance. Todos los derechos reservados.</p>
     <div style="margin-top: 10px;">
-        <a href="https://instagram.com/yessi_radiance" target="_blank" style="margin: 0 10px;">
-            <img src="https://cdn-icons-png.flaticon.com/24/1384/1384063.png" alt="Instagram">
-        </a>
-        <a href="https://facebook.com/yessi_radiance" target="_blank" style="margin: 0 10px;">
-            <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
-        </a>
-        <a href="https://www.tiktok.com/@yessi_radiance" target="_blank" style="margin: 0 10px;">
-            <img src="https://cdn-icons-png.flaticon.com/24/3046/3046122.png" alt="TikTok">
-        </a>
+      <a href="https://instagram.com/yessi_radiance" target="_blank" style="margin: 0 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/24/1384/1384063.png" alt="Instagram">
+      </a>
+      <a href="https://facebook.com/yessi_radiance" target="_blank" style="margin: 0 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
+      </a>
+      <a href="https://www.tiktok.com/@yessi_radiance" target="_blank" style="margin: 0 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/24/3046/3046122.png" alt="TikTok">
+      </a>
     </div>
-</footer>
-    <a href="https://wa.me/573197438546?text=Hola%20Yessi%2C%20quiero%20saber%20más%20sobre%20tus%20 productos." 
-   target="_blank" 
-   style="position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; text-align: center; font-size: 30px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center;">
-   &#x1F4AC;
-    </a>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/57TU_NUMERO?text=Hola%20Yessi%2C%20quiero%20saber%20más%20sobre%20tus%20productos"
+     target="_blank"
+     style="position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; text-align: center; font-size: 30px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center;">
+     &#x1F4AC;
+  </a>
+
+  <!-- Script de AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
