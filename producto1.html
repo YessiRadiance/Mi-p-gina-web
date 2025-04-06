@@ -7,6 +7,13 @@
   <link rel="icon" href="yessi-logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Meta SEO y Open Graph -->
+  <meta name="description" content="Kit Facial de Arroz Bioaqua - hidrata y rejuvenece tu piel con ingredientes naturales. ¡Compra ahora en Yessi Radiance!">
+  <meta property="og:title" content="Kit Facial de Arroz Bioaqua - Yessi Radiance">
+  <meta property="og:image" content="https://raw.githubusercontent.com/YessiRadiance/yessi-radiance/refs/heads/main/imagenes/producto1.jpg">
+  <meta property="og:description" content="Hidrata y rejuvenece tu piel con ingredientes naturales. ¡Compra ahora en Yessi Radiance!">
+  <meta property="og:type" content="product">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -14,12 +21,14 @@
       margin: 0;
       padding: 0;
     }
+
     header {
       text-align: center;
       padding: 20px;
       background-color: #fff;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
+
     header img {
       width: 160px;
       height: 160px;
@@ -27,39 +36,49 @@
       object-fit: cover;
       margin-bottom: 10px;
     }
+
     header h1 {
       font-size: 2.5em;
       color: #333;
     }
+
     header p {
       font-size: 1.2em;
       color: #666;
     }
+
     .producto-container {
       display: flex;
       justify-content: center;
       padding: 20px;
+      gap: 20px;
     }
+
     .producto-imagen {
       width: 50%;
-      padding-right: 20px;
     }
+
     .producto-imagen img {
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+
     .producto-detalles {
       width: 40%;
     }
+
     .producto-detalles h2 {
       color: #f3c6d2;
+      margin-top: 0;
     }
+
     .producto-detalles p {
       font-size: 1.1em;
       color: #333;
       margin-bottom: 15px;
     }
+
     .boton-compra {
       background-color: #f3c6d2;
       border: none;
@@ -70,8 +89,45 @@
       cursor: pointer;
       transition: background-color 0.3s;
     }
+
     .boton-compra:hover {
       background-color: #e89db8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #fdfdfd;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    footer div {
+      margin-top: 10px;
+    }
+
+    footer a {
+      margin: 0 8px;
+      display: inline-block;
+    }
+
+    footer img {
+      vertical-align: middle;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .producto-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .producto-imagen,
+      .producto-detalles {
+        width: 100%;
+        padding: 0;
+      }
     }
   </style>
 </head>
@@ -92,7 +148,7 @@
       <p><strong>Precio:</strong> $40.000</p>
       <p><strong>Descripción:</strong> Este es un excelente producto para el cuidado de la piel. Hidrata y rejuvenece tu rostro con ingredientes naturales y efectivos.</p>
       <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20facial%20de%20Arroz%20de%20Bioaqua%20-%20$40.000%20Imagen:%20https://raw.githubusercontent.com/YessiRadiance/yessi-radiance/refs/heads/main/imagenes/producto1.jpg" target="_blank">
-        <button class="boton-compra">Comprar</button>
+        <button class="boton-compra" aria-label="Comprar por WhatsApp">Comprar</button>
       </a>
     </div>
   </div>
