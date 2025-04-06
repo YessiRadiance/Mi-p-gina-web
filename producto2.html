@@ -1,230 +1,171 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Producto 1 - Yessi Radiance</title>
-
   <link rel="icon" href="yessi-logo.jpg" type="image/jpeg">
-
   <link rel="stylesheet" href="style.css" />
 
-
+  <!-- Meta SEO y Open Graph -->
+  <meta name="description" content="Kit Facial de Arroz Bioaqua - hidrata y rejuvenece tu piel con ingredientes naturales. ¡Compra ahora en Yessi Radiance!">
+  <meta property="og:title" content="Kit Facial de Arroz Bioaqua - Yessi Radiance">
+  <meta property="og:image" content="https://raw.githubusercontent.com/YessiRadiance/yessi-radiance/refs/heads/main/imagenes/producto1.jpg">
+  <meta property="og:description" content="Hidrata y rejuvenece tu piel con ingredientes naturales. ¡Compra ahora en Yessi Radiance!">
+  <meta property="og:type" content="product">
 
   <style>
-
     body {
-
       font-family: Arial, sans-serif;
-
       background-color: #fff;
-
       margin: 0;
-
       padding: 0;
-
     }
 
     header {
-
       text-align: center;
-
       padding: 20px;
-
       background-color: #fff;
-
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-
     }
 
     header img {
-
       width: 160px;
-
       height: 160px;
-
       border-radius: 50%;
-
       object-fit: cover;
-
       margin-bottom: 10px;
-
     }
 
     header h1 {
-
       font-size: 2.5em;
-
       color: #333;
-
     }
 
     header p {
-
       font-size: 1.2em;
-
       color: #666;
-
     }
 
     .producto-container {
-
       display: flex;
-
       justify-content: center;
-
       padding: 20px;
-
+      gap: 20px;
     }
 
     .producto-imagen {
-
       width: 50%;
-
-      padding-right: 20px;
-
     }
 
     .producto-imagen img {
-
       width: 100%;
-
       border-radius: 12px;
-
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
     }
 
     .producto-detalles {
-
       width: 40%;
-
     }
 
     .producto-detalles h2 {
-
       color: #f3c6d2;
-
+      margin-top: 0;
     }
 
     .producto-detalles p {
-
       font-size: 1.1em;
-
       color: #333;
-
       margin-bottom: 15px;
-
     }
 
     .boton-compra {
-
       background-color: #f3c6d2;
-
       border: none;
-
       padding: 10px 20px;
-
       border-radius: 8px;
-
       color: white;
-
       font-weight: bold;
-
       cursor: pointer;
-
       transition: background-color 0.3s;
-
     }
 
     .boton-compra:hover {
-
       background-color: #e89db8;
-
     }
 
-  </style>
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #fdfdfd;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #555;
+    }
 
+    footer div {
+      margin-top: 10px;
+    }
+
+    footer a {
+      margin: 0 8px;
+      display: inline-block;
+    }
+
+    footer img {
+      vertical-align: middle;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .producto-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .producto-imagen,
+      .producto-detalles {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  </style>
 </head>
 
-
-
 <body>
-
   <header>
-
     <img src="yessi-logo.jpg" alt="Logo Yessi Radiance" />
-
     <h1>Yessi Radiance</h1>
-
     <p>Brilla con el cuidado que tu piel merece</p>
-
   </header>
 
-
-
   <div class="producto-container">
-
     <div class="producto-imagen">
-
-      <img src="https://raw.githubusercontent.com/YessiRadiance/yessi-radiance/refs/heads/main/imagenes/producto2.jpg" alt="Producto 2" />
-
+      <img src="https://raw.githubusercontent.com/YessiRadiance/yessi-radiance/refs/heads/main/imagenes/producto1.jpg" alt="Producto 1" />
     </div>
-
     <div class="producto-detalles">
-
-      <h2>Kit Facial Camelias Niacinamida Bioaqua</h2>
-
-      <p><strong>Precio:</strong> $35.000</p>
-
+      <h2>Kit Facial de Arroz Bioaqua</h2>
+      <p><strong>Precio:</strong> $40.000</p>
       <p><strong>Descripción:</strong> Este es un excelente producto para el cuidado de la piel. Hidrata y rejuvenece tu rostro con ingredientes naturales y efectivos.</p>
-
-      <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20facial%20Camelias%20Niacinamida%20de%20Bioaqua%20-%20$35.000%20Imagen:%20https://raw.githubusercontent.com/YessiRadiance/yessi-radiance/refs/heads/main/imagenes/producto2.jpg" target="_blank">
-
-        <button class="boton-compra">Comprar</button>
-
+      <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20facial%20de%20Arroz%20de%20Bioaqua%20-%20$40.000%20Imagen:%20https://raw.githubusercontent.com/YessiRadiance/yessi-radiance/refs/heads/main/imagenes/producto1.jpg" target="_blank">
+        <button class="boton-compra" aria-label="Comprar por WhatsApp">Comprar</button>
       </a>
-
     </div>
-
   </div>
 
-
-
   <footer>
-
     <p>&copy; 2025 Yessi Radiance. Todos los derechos reservados.</p>
-
     <div>
-
       <a href="https://instagram.com/yessi_radiance" target="_blank">
-
         <img src="https://cdn-icons-png.flaticon.com/24/1384/1384063.png" alt="Instagram">
-
       </a>
-
       <a href="https://facebook.com/yessi_radiance" target="_blank">
-
         <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
-
       </a>
-
       <a href="https://www.tiktok.com/@yessi_radiance" target="_blank">
-
         <img src="https://cdn-icons-png.flaticon.com/24/3046/3046122.png" alt="TikTok">
-
       </a>
-
     </div>
-
   </footer>
-
-
 </body>
-
 </html>
