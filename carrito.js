@@ -1,23 +1,42 @@
-
-let carrito = [];
+const carrito = [];
 
 function agregarAlCarrito(nombre, imagen) {
   carrito.push({ nombre, imagen });
-  alert(`${nombre} ha sido agregado al carrito.`);
+  actualizarCarritoVisual();
 }
 
-function generarMensajeWhatsApp() {
+function actualizarCarritoVisual() {
+  const lista = document.getElementById('lista-carrito');
+  lista.innerHTML = '';
+
+  carrito.forEach((item, index) => {
+    const div = document.createElement('div');
+    div.className = 'item-carrito';
+    div.innerHTML = `
+      <img src="${item.imagen}" alt="${item.nombre}" />
+      <span>${item.nombre}</span>
+      <button onclick="eliminarItem(${index})">X</button>
+    `;
+    lista.appendChild(div);
+  });
+}
+
+function eliminarItem(index) {
+  carrito.splice(index, 1);
+  actualizarCarritoVisual();
+}
+
+function enviarPedidoPorWhatsApp() {
   if (carrito.length === 0) {
     alert("Tu carrito está vacío.");
     return;
   }
 
-  let mensaje = "Hola Yessi, quiero comprar los siguientes productos:%0A";
-  carrito.forEach((producto, index) => {
-    mensaje += `%0A${index + 1}. ${producto.nombre} - Imagen: ${producto.imagen}`;
+  let mensaje = "Hola Yessi, quiero comprar los siguientes productos:\n";
+  carrito.forEach((item, i) => {
+    mensaje += `${i + 1}. ${item.nombre}\n`;
   });
 
-  const telefono = "573197438544";
-  const url = `https://wa.me/${telefono}?text=${mensaje}`;
-  window.open(url, "_blank");
+  const enlace = `https://wa.me/573197438544?text=${encodeURIComponent(mensaje)}`;
+  window.open(enlace, '_blank');
 }
