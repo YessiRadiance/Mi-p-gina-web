@@ -73,6 +73,28 @@
     .boton-compra:hover {
       background-color: #e89db8;
     }
+
+    /* Estilo para el botón flotante de WhatsApp */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .whatsapp-button img {
+      width: 40px;
+      height: 40px;
+    }
   </style>
 </head>
 
@@ -112,10 +134,11 @@
     </div>
   </footer>
 
+  <!-- Botón flotante de WhatsApp con imagen personalizada -->
   <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20saber%20más%20sobre%20tus%20productos."
      target="_blank"
-     style="position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; text-align: center; font-size: 30px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center;">
-     &#x1F4AC;
+     class="whatsapp-button">
+     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
   </a>
 </body>
 </html>
