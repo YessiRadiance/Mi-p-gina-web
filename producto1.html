@@ -13,13 +13,16 @@
       background-color: #fff;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
+
     header {
       text-align: center;
       padding: 20px;
       background-color: #fff;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
+
     header img {
       width: 160px;
       height: 160px;
@@ -27,95 +30,92 @@
       object-fit: cover;
       margin-bottom: 10px;
     }
+
     header h1 {
       font-size: 2.5em;
       color: #333;
     }
+
     header p {
       font-size: 1.2em;
       color: #666;
     }
+
     .producto-container {
       display: flex;
       justify-content: center;
-      padding: 20px;
+      padding: 40px;
+      gap: 30px;
+      background-color: #f9f9f9; /* Fondo suave para el producto */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
+
     .producto-imagen {
       width: 50%;
       padding-right: 20px;
     }
+
     .producto-imagen img {
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+
     .producto-detalles {
       width: 40%;
     }
+
     .producto-detalles h2 {
       color: #f3c6d2;
     }
+
     .producto-detalles p {
       font-size: 1.1em;
       color: #333;
       margin-bottom: 15px;
     }
+
+    .producto-detalles ul {
+      list-style-type: square;
+      margin-left: 20px;
+      color: #555;
+    }
+
     .boton-compra {
       background-color: #f3c6d2;
       border: none;
-      padding: 10px 20px;
+      padding: 15px 30px;
       border-radius: 8px;
       color: white;
       font-weight: bold;
       cursor: pointer;
       transition: background-color 0.3s;
+      font-size: 1.1em;
     }
+
     .boton-compra:hover {
       background-color: #e89db8;
     }
-  </style>
-</head>
 
-<body>
-  <header>
-    <img src="yessi-logo.jpg" alt="Logo Yessi Radiance" />
-    <h1>Yessi Radiance</h1>
-    <p>Brilla con el cuidado que tu piel merece</p>
-  </header>
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333; /* Fondo más oscuro */
+      color: #fff; /* Texto en color claro */
+      margin-top: 50px;
+    }
 
-  <div class="producto-container">
-    <div class="producto-imagen">
-      <img src="imagenes/producto1.jpg" alt="Producto 1" />
-    </div>
-    <div class="producto-detalles">
-      <h2>Kit Facial de Arroz Bioaqua</h2>
-      <p><strong>Precio:</strong> $40.000</p>
-      <p><strong>Descripción:</strong> Este es un excelente producto para el cuidado de la piel. Hidrata y rejuvenece tu rostro con ingredientes naturales y efectivos.</p>
-      <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%201" target="_blank">
-        <button class="boton-compra">Comprar</button>
-      </a>
-    </div>
-  </div>
+    footer p {
+      margin: 0;
+      font-size: 1.1em;
+    }
 
-  <footer>
-    <p>&copy; 2025 Yessi Radiance. Todos los derechos reservados.</p>
-    <div>
-      <a href="https://instagram.com/yessi_radiance" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/24/1384/1384063.png" alt="Instagram">
-      </a>
-      <a href="https://facebook.com/yessi_radiance" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
-      </a>
-      <a href="https://www.tiktok.com/@yessi_radiance" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/24/3046/3046122.png" alt="TikTok">
-      </a>
-    </div>
-  </footer>
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+    }
 
-  <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20saber%20más%20sobre%20tus%20productos."
-     target="_blank"
-     style="position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; text-align: center; font-size: 30px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center;">
-     &#x1F4AC;
-  </a>
-</body>
-</html>
+    footer img {
+      width: 30px;
+      height:
