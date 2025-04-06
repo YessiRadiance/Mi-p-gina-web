@@ -45,7 +45,6 @@
       gap: 20px;
       background-color: #f3c6d2;
       padding: 10px;
-      position: relative;
     }
     nav a {
       color: white;
@@ -57,37 +56,6 @@
     }
     nav a:hover {
       background-color: #e89db8;
-    }
-
-    /* Estilo para el menú desplegable */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f3c6d2;
-      min-width: 160px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-
-    .dropdown-content a {
-      color: white;
-      padding: 10px;
-      text-decoration: none;
-      display: block;
-      text-align: center;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #e89db8;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
     }
 
     .boton-compra {
@@ -185,16 +153,6 @@
 
   <nav>
     <a href="#inicio">Inicio</a>
-
-    <!-- Menú desplegable con categorías -->
-    <div class="dropdown">
-      <a href="#">Categorías</a>
-      <div class="dropdown-content">
-        <a href="#skin-care">Skin Care</a>
-        <a href="#make-up">Make Up</a>
-      </div>
-    </div>
-
     <a href="#productos">Productos</a>
     <a href="#contacto">Contacto</a>
   </nav>
@@ -203,11 +161,10 @@
     <section id="productos">
       <h2 style="text-align: center;">Productos Destacados</h2>
 
-      <!-- Categoría Skin Care -->
-      <h3 id="skin-care" style="text-align: center;">Skin Care</h3>
+      <!-- Producto 1 en la página principal -->
       <div class="producto" data-aos="fade-up">
         <a href="producto1.html" target="_blank">
-          <img src="imagenes/producto1.jpg" alt="Kit Facial Arroz Bioaqua" />
+          <img src="imagenes/producto1.jpg" alt="Producto 1" />
           <h3 style="text-decoration: none;">Kit Facial Arroz Bioaqua</h3>
         </a>
         <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%201" target="_blank">
@@ -215,8 +172,18 @@
         </a>
       </div>
 
-      <!-- Categoría Make Up -->
-      <h3 id="make-up" style="text-align: center;">Make Up</h3>
+      <!-- Producto 2 -->
+      <div class="producto" data-aos="fade-up">
+        <a href="producto2.html" target="_blank">
+          <img src="imagenes/producto2.jpg" alt="Producto 2" />
+          <h3 style="text-decoration: none;">Producto 2</h3>
+        </a>
+        <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%202" target="_blank">
+          <button class="boton-compra">Comprar</button>
+        </a>
+      </div>
+
+      <!-- Producto 3 -->
       <div class="producto" data-aos="fade-up">
         <a href="producto3.html" target="_blank">
           <img src="imagenes/producto3.jpg" alt="Producto 3" />
@@ -227,7 +194,8 @@
         </a>
       </div>
 
-      <!-- Continúa agregando más productos según sea necesario... -->
+      <!-- Continúa con los productos restantes... -->
+      
     </section>
   </main>
 
