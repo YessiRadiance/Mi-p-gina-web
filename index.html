@@ -1,264 +1,101 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yessi Radiance</title>
-  <link rel="icon" href="yessi-logo.jpg" type="image/jpeg">
+  <link rel="icon" href="imagenes/yessi-logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Fondo y estilos básicos -->
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to bottom, #ffe0ec, #fff9f9);
-      color: #333;
-    }
-
-    header {
-      text-align: center;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    header img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 10px;
-      border: 4px solid #f3c6d2;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      color: #333;
-    }
-
-    header p {
-      font-size: 1.2em;
-      color: #666;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      background-color: #f3c6d2;
-      padding: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #e89db8;
-    }
-
-    .boton-compra {
-      background-color: #f3c6d2;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 10px;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      margin-top: 5px;
-    }
-
-    .boton-compra:hover {
-      background-color: #e89db8;
-    }
-
-    #productos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    #productos .producto {
-      width: 160px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-      animation: aparecer 0.8s ease-in;
-    }
-
-    #productos .producto:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    #productos img {
-      width: 100%;
-      border-radius: 12px;
-    }
-
-    @keyframes aparecer {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f8f8f8;
-    }
-
-    footer p {
-      margin: 0;
-      color: #333;
-    }
-
-    footer a {
-      margin: 0 10px;
-      text-decoration: none;
-    }
-
-    footer img {
-      width: 24px;
-      height: 24px;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2em;
-      }
-
-      header p {
-        font-size: 1em;
-      }
-
-      nav a {
-        font-size: 0.9em;
-      }
-
-      #productos .producto {
-        width: 45%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      #productos .producto {
-        width: 90%;
-      }
-    }
-  </style>
-
-  <!-- AOS para animaciones -->
+  <script defer src="carrito.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
-
 <body>
   <header>
-    <img src="yessi-logo.jpg" alt="Logo de Yessi Radiance" />
+    <img src="imagenes/yessi-logo.jpg" alt="Logo Yessi Radiance" />
     <h1>Yessi Radiance</h1>
     <p>Nutre tu piel, ilumina tu esencia</p>
-  </header>
-
-  <nav>
+  </header>  <nav>
     <a href="#inicio">Inicio</a>
     <a href="#productos">Productos</a>
     <a href="#contacto">Contacto</a>
-  </nav>
-
-  <main>
+  </nav>  <main>
     <section id="productos">
-      <h2 style="text-align: center;">Productos Destacados</h2>
+      <h2 style="text-align: center;">Productos Destacados</h2><!-- Productos -->
+  <div class="lista-productos">
+    <!-- Se generan 20 productos -->
+    <!-- Cada uno incluye imagen, nombre, precio, botón de compra y agregar al carrito -->
+    <!-- Código generado automáticamente -->
+    <!-- Inicio productos -->
+    <!-- Los productos están listos para reemplazar nombre, precio o imagen -->
+    <!-- Producto #1 al #20 -->
+    
+    <!-- Este bloque será generado dinámicamente abajo -->
+  </div>
+</section>
 
-      <!-- Producto 1 -->
-      <div class="producto" data-aos="fade-up">
-        <a href="producto1.html" target="_blank">
-          <img src="imagenes/producto1.jpg" alt="Kit Facial Arroz Bioaqua" loading="lazy" />
-          <h3 style="text-decoration: none;">Kit Facial Arroz Bioaqua</h3>
-        </a>
-        <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%201" target="_blank">
-          <button class="boton-compra">Comprar</button>
-        </a>
-      </div>
-
-      <!-- Producto 2 -->
-      <div class="producto" data-aos="fade-up">
-        <a href="producto2.html" target="_blank">
-          <img src="imagenes/producto2.jpg" alt="Kit Facial Camelias Niacinamida" loading="lazy" />
-          <h3 style="text-decoration: none;">Kit Facial Camelias Niacinamida</h3>
-        </a>
-        <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%202" target="_blank">
-          <button class="boton-compra">Comprar</button>
-        </a>
-      </div>
-
-      <!-- Producto 3 -->
-      <div class="producto" data-aos="fade-up">
-        <a href="producto3.html" target="_blank">
-          <img src="imagenes/producto3.jpg" alt="Kit Facial Aclarante Vitamina C" loading="lazy" />
-          <h3 style="text-decoration: none;">Kit Facial Aclarante Vitamina C</h3>
-        </a>
-        <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20el%20Producto%203" target="_blank">
-          <button class="boton-compra">Comprar</button>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+  </main>  <footer>
     <p>&copy; 2025 Yessi Radiance. Todos los derechos reservados.</p>
     <div>
-      <a href="https://instagram.com/yessi_radiance" target="_blank" aria-label="Instagram Yessi Radiance">
-        <img src="https://cdn-icons-png.flaticon.com/24/1384/1384063.png" alt="Instagram" />
+      <a href="https://instagram.com/yessi_radiance" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/24/1384/1384063.png" alt="Instagram">
       </a>
-      <a href="https://facebook.com/yessi_radiance" target="_blank" aria-label="Facebook Yessi Radiance">
-        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" />
+      <a href="https://facebook.com/yessi_radiance" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
       </a>
-      <a href="https://www.tiktok.com/@yessi_radiance" target="_blank" aria-label="TikTok Yessi Radiance">
-        <img src="https://cdn-icons-png.flaticon.com/24/3046/3046122.png" alt="TikTok" />
+      <a href="https://www.tiktok.com/@yessi_radiance" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/24/3046/3046122.png" alt="TikTok">
       </a>
     </div>
-  </footer>
+  </footer><a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20saber%20m%C3%A1s%20sobre%20tus%20productos."
+target="_blank"
+style="position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center;"> <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 40px; height: 40px;" /> </a>
 
-  <!-- Botón flotante WhatsApp -->
-  <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20saber%20más%20sobre%20tus%20productos."
-     target="_blank"
-     aria-label="Chatea por WhatsApp"
-     style="position: fixed; bottom: 20px; right: 20px; background-color: #25d366; border-radius: 50%; width: 60px; height: 60px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center;">
-     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 40px; height: 40px;" />
-  </a>
+<a href="https://www.instagram.com/yessiradiance?igsh=bnhzcTFibmtldDV6"
+target="_blank"
+aria-label="Visita nuestro Instagram"
+style="position: fixed; bottom: 90px; right: 20px; background-color: #E1306C; color: white; border-radius: 50%; width: 60px; height: 60px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center;"> <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" style="width: 30px; height: 30px;"> </a>
 
-  <!-- Botón flotante Instagram -->
-  <a href="https://www.instagram.com/yessiradiance?igsh=bnhzcTFibmtldDV6"
-     target="_blank"
-     aria-label="Visita nuestro Instagram"
-     style="position: fixed; bottom: 90px; right: 20px; background-color: #E1306C; border-radius: 50%; width: 60px; height: 60px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center;">
-     <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" style="width: 30px; height: 30px;" />
-  </a>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
+    AOS.init();
 
-  <!-- Script de AOS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true });
-  </script>
-</body>
+    const productos = [
+      { nombre: "Kit Facial Arroz Bioaqua", precio: "$35.000", imagen: "imagenes/producto1.jpg" },
+      { nombre: "Kit Facial Camelias Niacinamida", precio: "$37.000", imagen: "imagenes/producto2.jpg" },
+      { nombre: "Kit Vitamina C Glow", precio: "$42.000", imagen: "imagenes/producto3.jpg" },
+      { nombre: "Serum Hidratante Aloe Vera", precio: "$28.000", imagen: "imagenes/producto4.jpg" },
+      { nombre: "Espuma Limpiadora Té Verde", precio: "$30.000", imagen: "imagenes/producto5.jpg" },
+      { nombre: "Mascarilla Carbón Activo", precio: "$25.000", imagen: "imagenes/producto6.jpg" },
+      { nombre: "Tónico Refrescante Rosas", precio: "$22.000", imagen: "imagenes/producto7.jpg" },
+      { nombre: "Pack Antiacné Herbal", precio: "$45.000", imagen: "imagenes/producto8.jpg" },
+      { nombre: "Crema Hidratante Noche", precio: "$34.000", imagen: "imagenes/producto9.jpg" },
+      { nombre: "Kit Contorno de Ojos", precio: "$40.000", imagen: "imagenes/producto10.jpg" },
+      { nombre: "Set Vitamina E", precio: "$36.000", imagen: "imagenes/producto11.jpg" },
+      { nombre: "Jabón Facial Colágeno", precio: "$18.000", imagen: "imagenes/producto12.jpg" },
+      { nombre: "Mascarilla de Oro 24K", precio: "$39.000", imagen: "imagenes/producto13.jpg" },
+      { nombre: "Kit Blanqueador Natural", precio: "$41.000", imagen: "imagenes/producto14.jpg" },
+      { nombre: "Aceite Facial Jojoba", precio: "$26.000", imagen: "imagenes/producto15.jpg" },
+      { nombre: "Espuma Frutas Tropicales", precio: "$29.000", imagen: "imagenes/producto16.jpg" },
+      { nombre: "Kit Anti-Edad Retinol", precio: "$50.000", imagen: "imagenes/producto17.jpg" },
+      { nombre: "Tónico Facial Manzanilla", precio: "$24.000", imagen: "imagenes/producto18.jpg" },
+      { nombre: "Mascarilla Exfoliante Café", precio: "$32.000", imagen: "imagenes/producto19.jpg" },
+      { nombre: "Kit Full Glow Frutas", precio: "$48.000", imagen: "imagenes/producto20.jpg" },
+    ];
+
+    const contenedor = document.querySelector(".lista-productos");
+
+    productos.forEach((producto, i) => {
+      const div = document.createElement("div");
+      div.className = "producto";
+      div.setAttribute("data-aos", "fade-up");
+      div.innerHTML = `
+        <img src="${producto.imagen}" alt="${producto.nombre}" />
+        <h3>${producto.nombre}</h3>
+        <p>${producto.precio}</p>
+        <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20${encodeURIComponent(producto.nombre)}" target="_blank">
+          <button class="boton-compra">Comprar</button>
+        </a>
+        <button class="boton-compra" onclick="agregarAlCarrito('${producto.nombre}', '${producto.imagen}')">Agregar al carrito</button>
+      `;
+      contenedor.appendChild(div);
+    });
+  </script></body>
 </html>
