@@ -1,198 +1,101 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yessi Radiance</title>
+  <link rel="icon" href="imagenes/yessi-logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="https://yessiradiance.github.io/yessi-radiance/imagenes/yessi-logo.jpg" type="image/jpeg">
+  <script defer src="carrito.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
   <header>
-    <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/yessi-logo.jpg" alt="Logo Yessi Radiance" />
+    <img src="imagenes/yessi-logo.jpg" alt="Logo Yessi Radiance" />
     <h1>Yessi Radiance</h1>
     <p>Nutre tu piel, ilumina tu esencia</p>
-  </header>
-
-  <nav>
+  </header>  <nav>
     <a href="#inicio">Inicio</a>
     <a href="#productos">Productos</a>
     <a href="#contacto">Contacto</a>
-  </nav>
-
-  <main>
+  </nav>  <main>
     <section id="productos">
-      <h2 style="text-align: center;">Nuestros Productos</h2>
-      
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto1.jpg" alt="Kit Facial Arroz Bioaqua" />
-        <h3>Kit Facial Arroz Bioaqua</h3>
-        <p>$35.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Kit Facial Arroz Bioaqua', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto1.jpg')">Agregar al carrito</button>
-      </div>
+      <h2 style="text-align: center;">Productos Destacados</h2><!-- Productos -->
+  <div class="lista-productos">
+    <!-- Se generan 20 productos -->
+    <!-- Cada uno incluye imagen, nombre, precio, botón de compra y agregar al carrito -->
+    <!-- Código generado automáticamente -->
+    <!-- Inicio productos -->
+    <!-- Los productos están listos para reemplazar nombre, precio o imagen -->
+    <!-- Producto #1 al #20 -->
     
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto2.jpg" alt="Kit Facial Camelias Niacinamida" />
-        <h3>Kit Facial Camelias Niacinamida</h3>
-        <p>$37.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Kit Facial Camelias Niacinamida', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto2.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto3.jpg" alt="Kit Facial Vitamina C Aclarante" />
-        <h3>Kit Facial Vitamina C Aclarante</h3>
-        <p>$36.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Kit Facial Vitamina C Aclarante', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto3.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto4.jpg" alt="Serum Hidratante Rosa Mosqueta" />
-        <h3>Serum Hidratante Rosa Mosqueta</h3>
-        <p>$25.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Serum Hidratante Rosa Mosqueta', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto4.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto5.jpg" alt="Mascarilla Carbón Detox" />
-        <h3>Mascarilla Carbón Detox</h3>
-        <p>$22.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Mascarilla Carbón Detox', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto5.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto6.jpg" alt="Crema de Día FPS 30" />
-        <h3>Crema de Día FPS 30</h3>
-        <p>$28.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Crema de Día FPS 30', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto6.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto7.jpg" alt="Espuma Facial Limpiadora" />
-        <h3>Espuma Facial Limpiadora</h3>
-        <p>$19.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Espuma Facial Limpiadora', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto7.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto8.jpg" alt="Contorno de Ojos Antiarrugas" />
-        <h3>Contorno de Ojos Antiarrugas</h3>
-        <p>$30.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Contorno de Ojos Antiarrugas', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto8.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto9.jpg" alt="Kit Antimanchas Natural" />
-        <h3>Kit Antimanchas Natural</h3>
-        <p>$40.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Kit Antimanchas Natural', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto9.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto10.jpg" alt="Tónico Facial Refrescante" />
-        <h3>Tónico Facial Refrescante</h3>
-        <p>$18.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Tónico Facial Refrescante', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto10.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto11.jpg" alt="Serum de Colágeno Puro" />
-        <h3>Serum de Colágeno Puro</h3>
-        <p>$32.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Serum de Colágeno Puro', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto11.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto12.jpg" alt="Crema Nocturna Nutritiva" />
-        <h3>Crema Nocturna Nutritiva</h3>
-        <p>$34.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Crema Nocturna Nutritiva', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto12.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto13.jpg" alt="Mascarilla Facial de Aloe" />
-        <h3>Mascarilla Facial de Aloe</h3>
-        <p>$21.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Mascarilla Facial de Aloe', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto13.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto14.jpg" alt="Exfoliante Facial Suave" />
-        <h3>Exfoliante Facial Suave</h3>
-        <p>$20.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Exfoliante Facial Suave', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto14.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto15.jpg" alt="Pack 3 Mascarillas Hidratantes" />
-        <h3>Pack 3 Mascarillas Hidratantes</h3>
-        <p>$38.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Pack 3 Mascarillas Hidratantes', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto15.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto16.jpg" alt="Aceite Facial Regenerador" />
-        <h3>Aceite Facial Regenerador</h3>
-        <p>$29.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Aceite Facial Regenerador', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto16.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto17.jpg" alt="Gel Limpiador Purificante" />
-        <h3>Gel Limpiador Purificante</h3>
-        <p>$23.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Gel Limpiador Purificante', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto17.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto18.jpg" alt="Serum Antiacné Herbal" />
-        <h3>Serum Antiacné Herbal</h3>
-        <p>$27.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Serum Antiacné Herbal', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto18.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto19.jpg" alt="Jabón Facial Natural" />
-        <h3>Jabón Facial Natural</h3>
-        <p>$15.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Jabón Facial Natural', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto19.jpg')">Agregar al carrito</button>
-      </div>
-    
-      <div class="producto" data-aos="fade-up">
-        <img src="https://yessiradiance.github.io/yessi-radiance/imagenes/producto20.jpg" alt="Kit Mini Spa Facial" />
-        <h3>Kit Mini Spa Facial</h3>
-        <p>$42.000</p>
-        <button class="boton-carrito" onclick="agregarAlCarrito('Kit Mini Spa Facial', 'https://yessiradiance.github.io/yessi-radiance/imagenes/producto20.jpg')">Agregar al carrito</button>
-      </div>
-    
-    </section>
-    <div style="text-align:center; margin: 20px;">
-      <button class="boton-compra" onclick="generarMensajeWhatsApp()">Enviar Pedido por WhatsApp</button>
-    </div>
-  </main>
+    <!-- Este bloque será generado dinámicamente abajo -->
+  </div>
+</section>
 
-  <footer>
+  </main>  <footer>
     <p>&copy; 2025 Yessi Radiance. Todos los derechos reservados.</p>
     <div>
-      <a href="https://instagram.com/yessi_radiance" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/1384/1384063.png" alt="Instagram"></a>
-      <a href="https://facebook.com/yessi_radiance" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook"></a>
-      <a href="https://www.tiktok.com/@yessi_radiance" target="_blank"><img src="https://cdn-icons-png.flaticon.com/24/3046/3046122.png" alt="TikTok"></a>
+      <a href="https://instagram.com/yessi_radiance" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/24/1384/1384063.png" alt="Instagram">
+      </a>
+      <a href="https://facebook.com/yessi_radiance" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
+      </a>
+      <a href="https://www.tiktok.com/@yessi_radiance" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/24/3046/3046122.png" alt="TikTok">
+      </a>
     </div>
-  </footer>
+  </footer><a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20saber%20m%C3%A1s%20sobre%20tus%20productos."
+target="_blank"
+style="position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center;"> <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 40px; height: 40px;" /> </a>
 
-  <!-- Botones flotantes -->
-  <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20saber%20más%20sobre%20tus%20productos."
-     target="_blank"
-     style="position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center;">
-     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 40px; height: 40px;" />
-  </a>
-  <a href="https://www.instagram.com/yessiradiance" target="_blank"
-     style="position: fixed; bottom: 90px; right: 20px; background-color: #E1306C; color: white; border-radius: 50%; width: 60px; height: 60px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center;">
-     <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" style="width: 30px; height: 30px;">
-  </a>
+<a href="https://www.instagram.com/yessiradiance?igsh=bnhzcTFibmtldDV6"
+target="_blank"
+aria-label="Visita nuestro Instagram"
+style="position: fixed; bottom: 90px; right: 20px; background-color: #E1306C; color: white; border-radius: 50%; width: 60px; height: 60px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center;"> <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" style="width: 30px; height: 30px;"> </a>
 
-  <script src="carrito.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
-</body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
+    AOS.init();
+
+    const productos = [
+      { nombre: "Kit Facial Arroz Bioaqua", precio: "$35.000", imagen: "imagenes/producto1.jpg" },
+      { nombre: "Kit Facial Camelias Niacinamida", precio: "$37.000", imagen: "imagenes/producto2.jpg" },
+      { nombre: "Kit Vitamina C Glow", precio: "$42.000", imagen: "imagenes/producto3.jpg" },
+      { nombre: "Serum Hidratante Aloe Vera", precio: "$28.000", imagen: "imagenes/producto4.jpg" },
+      { nombre: "Espuma Limpiadora Té Verde", precio: "$30.000", imagen: "imagenes/producto5.jpg" },
+      { nombre: "Mascarilla Carbón Activo", precio: "$25.000", imagen: "imagenes/producto6.jpg" },
+      { nombre: "Tónico Refrescante Rosas", precio: "$22.000", imagen: "imagenes/producto7.jpg" },
+      { nombre: "Pack Antiacné Herbal", precio: "$45.000", imagen: "imagenes/producto8.jpg" },
+      { nombre: "Crema Hidratante Noche", precio: "$34.000", imagen: "imagenes/producto9.jpg" },
+      { nombre: "Kit Contorno de Ojos", precio: "$40.000", imagen: "imagenes/producto10.jpg" },
+      { nombre: "Set Vitamina E", precio: "$36.000", imagen: "imagenes/producto11.jpg" },
+      { nombre: "Jabón Facial Colágeno", precio: "$18.000", imagen: "imagenes/producto12.jpg" },
+      { nombre: "Mascarilla de Oro 24K", precio: "$39.000", imagen: "imagenes/producto13.jpg" },
+      { nombre: "Kit Blanqueador Natural", precio: "$41.000", imagen: "imagenes/producto14.jpg" },
+      { nombre: "Aceite Facial Jojoba", precio: "$26.000", imagen: "imagenes/producto15.jpg" },
+      { nombre: "Espuma Frutas Tropicales", precio: "$29.000", imagen: "imagenes/producto16.jpg" },
+      { nombre: "Kit Anti-Edad Retinol", precio: "$50.000", imagen: "imagenes/producto17.jpg" },
+      { nombre: "Tónico Facial Manzanilla", precio: "$24.000", imagen: "imagenes/producto18.jpg" },
+      { nombre: "Mascarilla Exfoliante Café", precio: "$32.000", imagen: "imagenes/producto19.jpg" },
+      { nombre: "Kit Full Glow Frutas", precio: "$48.000", imagen: "imagenes/producto20.jpg" },
+    ];
+
+    const contenedor = document.querySelector(".lista-productos");
+
+    productos.forEach((producto, i) => {
+      const div = document.createElement("div");
+      div.className = "producto";
+      div.setAttribute("data-aos", "fade-up");
+      div.innerHTML = `
+        <img src="${producto.imagen}" alt="${producto.nombre}" />
+        <h3>${producto.nombre}</h3>
+        <p>${producto.precio}</p>
+        <a href="https://wa.me/573197438544?text=Hola%2C%20quiero%20comprar%20${encodeURIComponent(producto.nombre)}" target="_blank">
+          <button class="boton-compra">Comprar</button>
+        </a>
+        <button class="boton-compra" onclick="agregarAlCarrito('${producto.nombre}', '${producto.imagen}')">Agregar al carrito</button>
+      `;
+      contenedor.appendChild(div);
+    });
+  </script></body>
 </html>
