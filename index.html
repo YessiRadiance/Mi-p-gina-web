@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -128,8 +129,8 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <img src="yessi-logo.jpg" alt="Logo Yessi Radiance" />
+  <header id="inicio">
+    <img src="yessi-logo.jpg" alt="Logo redondo de Yessi Radiance con fondo rosado claro" loading="lazy" />
     <h1>Yessi Radiance</h1>
     <p>Nutre tu piel, ilumina tu esencia</p>
   </header>
@@ -141,10 +142,11 @@
   <main>
     <section id="productos">
       <h2 style="text-align: center;">Productos Destacados</h2>
+
       <!-- Producto 1 -->
       <div class="producto" data-aos="fade-up">
         <a href="producto1.html" target="_blank">
-          <img src="imagenes/producto1.jpg" alt="Kit Facial Arroz Bioaqua" />
+          <img src="imagenes/producto1.jpg" alt="Kit Facial de Arroz Bioaqua - Yessi Radiance" loading="lazy" />
           <h3>Kit Facial Arroz Bioaqua</h3>
           <p>$40.000</p>
         </a>
@@ -152,10 +154,11 @@
           <button class="boton-compra">Comprar</button>
         </a>
       </div>
+
       <!-- Producto 2 -->
       <div class="producto" data-aos="fade-up">
         <a href="producto2.html" target="_blank">
-          <img src="imagenes/producto2.jpg" alt="Kit Facial Camelias Niacinamida" />
+          <img src="imagenes/producto2.jpg" alt="Kit Facial con Camelias y Niacinamida - Yessi Radiance" loading="lazy" />
           <h3>Kit Facial Camelias Niacinamida</h3>
           <p>$35.000</p>
         </a>
@@ -163,10 +166,11 @@
           <button class="boton-compra">Comprar</button>
         </a>
       </div>
+
       <!-- Producto 3 -->
       <div class="producto" data-aos="fade-up">
         <a href="producto3.html" target="_blank">
-          <img src="imagenes/producto3.jpg" alt="Kit Facial Aclarante Vitamina C" />
+          <img src="imagenes/producto3.jpg" alt="Kit Facial Aclarante con Vitamina C - Yessi Radiance" loading="lazy" />
           <h3>Kit Facial Aclarante Vitamina C</h3>
           <p>$36.000</p>
         </a>
@@ -177,7 +181,7 @@
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Yessi Radiance. Todos los derechos reservados.</p>
+    <p>&copy; <span id="year"></span> Yessi Radiance. Todos los derechos reservados.</p>
     <div>
       <a href="https://www.instagram.com/yessiradiance?igsh=bnhzcTFibmtldDV6" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/24/1384/1384063.png" alt="Instagram">
@@ -211,6 +215,9 @@
   </button>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
