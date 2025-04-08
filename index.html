@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
+    /* Estilos generales */
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
@@ -18,6 +19,32 @@
       background-repeat: repeat;
       background-size: 280px;
       color: #333;
+    }
+
+    /* Botón de inicio con huellita de gato */
+    .boton-inicio {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .boton-inicio img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .boton-inicio:hover {
+      transform: scale(1.1);
     }
 
     header {
@@ -244,6 +271,13 @@
 </head>
 
 <body>
+  <!-- Botón de inicio con huella de gato -->
+  <a href="#inicio">
+    <button class="boton-inicio">
+      <img src="imagenes/huellita.png" alt="Botón de inicio - Huella de gato">
+    </button>
+  </a>
+
   <header id="inicio">
     <img src="yessi-logo.jpg" alt="Logo redondo de Yessi Radiance con fondo rosado claro" loading="lazy" />
     <h1>Yessi Radiance</h1>
@@ -309,48 +343,14 @@
       <p>Descubre nuestros productos especialmente diseñados para ti. Da el primer paso hacia una piel más saludable y radiante.</p>
       <a href="productos.html" class="cta-button">Ver Productos</a>
     </section>
-
-    <!-- Testimonios -->
-    <section class="testimonios">
-      <h2>Lo que dicen nuestros clientes</h2>
-      <div class="testimonio">
-        <p>"He estado usando el Kit Facial de Arroz Bioaqua y mi piel nunca se ha sentido tan suave y radiante. ¡Totalmente recomendable!"</p>
-        <h3>- Laura García</h3>
-      </div>
-      <div class="testimonio">
-        <p>"Desde que comencé a usar los productos de Yessi Radiance, mi piel se ve más clara y fresca. ¡Me encanta!"</p>
-        <h3>- Ana Martínez</h3>
-      </div>
-    </section>
-
-    <!-- Beneficios del Producto -->
-    <section class="beneficios">
-      <h2>Beneficios de nuestros productos</h2>
-      <div class="beneficio">
-        <h3>Hidratación profunda</h3>
-        <p>Todos nuestros productos están diseñados para hidratar tu piel, dejándola suave y saludable todo el día.</p>
-      </div>
-      <div class="beneficio">
-        <h3>Ingredientes naturales</h3>
-        <p>Utilizamos solo los mejores ingredientes naturales, perfectos para todo tipo de piel.</p>
-      </div>
-      <div class="beneficio">
-        <h3>Resultados visibles</h3>
-        <p>Verás resultados desde las primeras aplicaciones, con una piel más luminosa y renovada.</p>
-      </div>
-    </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Yessi Radiance. Todos los derechos reservados.</p>
-    <div>
-      <a href="https://www.instagram.com/yessiradiance?igsh=bnhzcTFibmtldDV6" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/24/1384/1384063.png" alt="Instagram">
-      </a>
-      <a href="https://facebook.com/yessi_radiance" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
-      </a>
-    </div>
+    <p>&copy; 2025 Yessi Radiance. Todos los derechos reservados.</p>
+    <p>Contáctanos en <a href="mailto:yessiradiance@gmail.com">yessiradiance@gmail.com</a></p>
+    <p>Síguenos en nuestras redes sociales:</p>
+    <a href="https://www.instagram.com/yessiradiance" target="_blank"><img src="imagenes/instagram-icon.png" alt="Instagram" /></a>
+    <a href="https://wa.me/573197438544" target="_blank"><img src="imagenes/whatsapp-icon.png" alt="WhatsApp" /></a>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
