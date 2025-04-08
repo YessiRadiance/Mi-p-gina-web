@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Yessi Radiance</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Contacto</h1>
+    <p>Estamos aquí para ayudarte. Por favor, completa el formulario para que podamos responderte lo antes posible.</p>
+  </header>
+
+  <main>
+    <section id="contacto-formulario">
+      <h2>Formulario de Contacto</h2>
+      <form action="mailto:yessiradiance@gmail.com" method="post" enctype="text/plain">
+        <div>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+        </div>
+
+        <div>
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div>
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        </div>
+
+        <div>
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Yessi Radiance. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
