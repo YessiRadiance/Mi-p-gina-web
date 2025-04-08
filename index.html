@@ -6,6 +6,7 @@
   <title>Yessi Radiance</title>
   <link rel="icon" href="yessi-logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <style>
     body {
@@ -14,14 +15,12 @@
       background: linear-gradient(to bottom, #ffe0ec, #fff9f9);
       color: #333;
     }
-
     header {
       text-align: center;
       padding: 20px;
       background-color: #fff;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-
     header img {
       width: 160px;
       height: 160px;
@@ -31,17 +30,14 @@
       border: 4px solid #f3c6d2;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-
     header h1 {
       font-size: 2.5em;
       color: #333;
     }
-
     header p {
       font-size: 1.2em;
       color: #666;
     }
-
     nav {
       display: flex;
       justify-content: center;
@@ -49,7 +45,6 @@
       background-color: #f3c6d2;
       padding: 10px;
     }
-
     nav a {
       color: white;
       text-decoration: none;
@@ -58,11 +53,9 @@
       border-radius: 5px;
       transition: background-color 0.3s;
     }
-
     nav a:hover {
       background-color: #e89db8;
     }
-
     .boton-compra {
       background-color: #f3c6d2;
       border: none;
@@ -74,11 +67,9 @@
       transition: background-color 0.3s;
       margin-top: 5px;
     }
-
     .boton-compra:hover {
       background-color: #e89db8;
     }
-
     #productos {
       display: flex;
       flex-wrap: wrap;
@@ -86,45 +77,73 @@
       gap: 20px;
       padding: 20px;
     }
-
     #productos .producto {
       width: 160px;
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
     }
-
     #productos .producto:hover {
       transform: scale(1.05);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-
     #productos img {
       width: 100%;
       border-radius: 12px;
     }
-
     footer {
       text-align: center;
       padding: 20px;
       background-color: #f8f8f8;
     }
-
     footer p {
       margin: 0;
       color: #333;
     }
-
     footer a {
       margin: 0 10px;
       text-decoration: none;
     }
-
     footer img {
       width: 24px;
       height: 24px;
     }
 
+    /* WhatsApp burbuja */
+    .burbuja-wpp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      z-index: 1000;
+      animation: pulso 2s infinite;
+    }
+
+    .burbuja-wpp img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .burbuja-wpp span {
+      white-space: nowrap;
+    }
+
+    @keyframes pulso {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
       header h1 {
         font-size: 2em;
@@ -145,39 +164,7 @@
         width: 90%;
       }
     }
-
-    /* Animación botón flotante */
-    @keyframes pulso {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-      70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-    }
-
-    .boton-wpp {
-      position: fixed;
-      bottom: 10px;
-      left: 20px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: pulso 2s infinite;
-    }
-
-    .boton-wpp img {
-      width: 30px;
-      height: 30px;
-    }
   </style>
-
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -197,6 +184,7 @@
     <section id="productos">
       <h2 style="text-align: center;">Productos Destacados</h2>
 
+      <!-- Producto 1 -->
       <div class="producto" data-aos="fade-up">
         <a href="producto1.html" target="_blank">
           <img src="imagenes/producto1.jpg" alt="Producto 1" />
@@ -207,6 +195,7 @@
         </a>
       </div>
 
+      <!-- Producto 2 -->
       <div class="producto" data-aos="fade-up">
         <a href="producto2.html" target="_blank">
           <img src="imagenes/producto2.jpg" alt="Producto 2" />
@@ -217,6 +206,7 @@
         </a>
       </div>
 
+      <!-- Producto 3 -->
       <div class="producto" data-aos="fade-up">
         <a href="producto3.html" target="_blank">
           <img src="imagenes/producto3.jpg" alt="Producto 3" />
@@ -226,7 +216,6 @@
           <button class="boton-compra">Comprar</button>
         </a>
       </div>
-
     </section>
   </main>
 
@@ -245,18 +234,17 @@
     </div>
   </footer>
 
-  <!-- Botón flotante WhatsApp con animación -->
+  <!-- Botón flotante WhatsApp estilo burbuja -->
   <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20hacerte%20una%20consulta."
      target="_blank"
-     class="boton-wpp"
+     class="burbuja-wpp"
      aria-label="Chatea con nosotros por WhatsApp">
-     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Chat" />
+     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+     <span>¿Necesitas ayuda?</span>
   </a>
 
-  <!-- AOS para animaciones -->
+  <!-- AOS Animaciones -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script>AOS.init();</script>
 </body>
 </html>
