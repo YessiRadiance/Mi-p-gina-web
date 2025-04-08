@@ -1,75 +1,205 @@
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #ffe0ec, #fff9f9);
-    color: #333;
-}
-
-/* Navegación */
-nav {
-  background-color: #f3c6d2;
-  padding: 10px 0;
-  text-align: center;
-}
-nav a {
-  color: #fff;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-nav a:hover {
-  color: #a03c5c;
-}
-
-/* Animación para productos */
-.producto {
-  animation: aparecer 0.8s ease-in;
-}
-@keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Encabezados */
-h1, h2, h3 {
-  color: #a03c5c;
-}
-
-/* Formulario de contacto */
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-form button {
-  padding: 10px 20px;
-  background-color: #f3c6d2;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-form button:hover {
-  background-color: #e3a4b2;
-}
-
-/* Footer */
-footer {
-  background-color: #f8f8f8;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
-  color: #666;
+/* Tipografía */
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fffdfc;
+  background-image: url('imagenes/fondo-flores-blancas.jpg'); /* fondo decorativo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #333;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fff4f8cc;
+  border-bottom: 1px solid #eac1d1;
+}
+
+header img {
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ccc;
+}
+
+header h1 {
+  margin: 0.5rem 0 0;
+  font-size: 2rem;
+  color: #b7487b;
+}
+
+header p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Navegación Sticky */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.8rem 0;
+  box-shadow: 0 2px 8px #eec3d6;
+  z-index: 100;
+}
+
+nav a {
+  color: #b7487b;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Productos */
+#productos {
+  padding: 2rem 1rem;
+  background-color: #fffdfde6;
+}
+
+.producto {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.producto img {
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px #eee;
+}
+
+.producto h3 {
+  margin: 0.8rem 0 0.2rem;
+  font-size: 1.1rem;
+  color: #b7487b;
+}
+
+.producto p {
+  font-weight: bold;
+  margin: 0.3rem 0;
+}
+
+/* Botón de compra */
+.boton-compra {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #b7487b;
+  color: white;
+  text-decoration: none;
+  border-radius: 2rem;
+  margin-top: 0.7rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.boton-compra:hover {
+  background-color: #a33869;
+}
+
+.boton-compra img {
+  width: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #fff4f8;
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 2rem;
+}
+
+footer div {
+  margin-top: 0.5rem;
+}
+
+footer a img {
+  width: 24px;
+  margin: 0 8px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+footer a img:hover {
+  opacity: 1;
+}
+
+/* Chat flotante */
+.boton-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 999;
+}
+
+.boton-chat img {
+  width: 30px;
+}
+
+.chat-flotante {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 260px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.chat-header {
+  background-color: #25d366;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-cuerpo {
+  padding: 1rem;
+}
+
+.chat-cuerpo a {
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.chat-cuerpo a img {
+  width: 20px;
+}
+
+/* AOS */
+[data-aos] {
+  transition: all 0.6s ease-in-out !important;
 }
