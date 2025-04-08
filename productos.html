@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,13 +9,127 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
-    /* Agrega aquí los estilos para los productos */
+    /* Estilos para los productos */
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      background: #fffafc;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #333;
+    }
+
+    header p {
+      color: #666;
+      font-size: 1.2em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f3c6d2;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #e89db8;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    #productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .producto {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .producto img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .producto h3 {
+      margin: 15px 0 10px;
+      color: #333;
+    }
+
+    .producto p {
+      color: #666;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    .boton-compra {
+      background-color: #f3c6d2;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .boton-compra:hover {
+      background-color: #e89db8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f3f3f3;
+      font-size: 1em;
+      color: #333;
+    }
   </style>
 </head>
+
 <body>
 
-  <header id="inicio">
-    <img src="yessi-logo.jpg" alt="Logo redondo de Yessi Radiance con fondo rosado claro" loading="lazy" />
+  <header>
+    <img src="yessi-logo.jpg" alt="Logo Yessi Radiance" loading="lazy" />
     <h1>Yessi Radiance</h1>
     <p>Explora nuestros productos</p>
   </header>
@@ -30,7 +145,7 @@
       <h2 style="text-align: center;">Todos los Productos</h2>
 
       <!-- Producto 1 -->
-      <div class="producto" id="producto1" data-aos="fade-up">
+      <div class="producto" data-aos="fade-up">
         <img src="imagenes/producto1.jpg" alt="Kit Facial de Arroz Bioaqua - Yessi Radiance" loading="lazy" />
         <h3>Kit Facial de Arroz Bioaqua</h3>
         <p>$40.000</p>
@@ -40,7 +155,7 @@
       </div>
 
       <!-- Producto 2 -->
-      <div class="producto" id="producto2" data-aos="fade-up">
+      <div class="producto" data-aos="fade-up">
         <img src="imagenes/producto2.jpg" alt="Kit Facial con Camelias y Niacinamida - Yessi Radiance" loading="lazy" />
         <h3>Kit Facial Camelias Niacinamida</h3>
         <p>$35.000</p>
@@ -50,7 +165,7 @@
       </div>
 
       <!-- Producto 3 -->
-      <div class="producto" id="producto3" data-aos="fade-up">
+      <div class="producto" data-aos="fade-up">
         <img src="imagenes/producto3.jpg" alt="Kit Facial Aclarante con Vitamina C - Yessi Radiance" loading="lazy" />
         <h3>Kit Facial Aclarante Vitamina C</h3>
         <p>$36.000</p>
@@ -58,7 +173,7 @@
           <button class="boton-compra">Comprar</button>
         </a>
       </div>
-      
+
     </section>
   </main>
 
@@ -73,4 +188,5 @@
   </script>
 
 </body>
+
 </html>
