@@ -4,11 +4,213 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yessi Radiance</title>
-  <meta name="description" content="Yessi Radiance - Productos de cuidado facial coreano que nutren tu piel y realzan tu belleza natural. Compra kits faciales y más.">
   <link rel="icon" href="yessi-logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #fffafc, #fff);
+      background-image: url('imagenes/patron-rosado-suave.png');
+      background-repeat: repeat;
+      background-size: 280px;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 4px solid #f3c6d2;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #333;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #666;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #f3c6d2;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #e89db8;
+    }
+
+    .boton-compra {
+      background-color: #f3c6d2;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      margin-top: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .boton-compra img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .boton-compra:hover {
+      background-color: #e89db8;
+      transform: scale(1.05);
+    }
+
+    #productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    #productos .producto {
+      width: 160px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    #productos .producto:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    #productos img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    #contacto {
+      padding: 2rem 1rem;
+      background-color: #fff4f8cc;
+      text-align: center;
+    }
+
+    #contacto h2 {
+      font-size: 1.8rem;
+      color: #b7487b;
+      margin-bottom: 1rem;
+    }
+
+    #contacto form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    #contacto input,
+    #contacto textarea {
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 1rem;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    #contacto button {
+      padding: 0.8rem;
+      background-color: #b7487b;
+      color: white;
+      border: none;
+      border-radius: 2rem;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #contacto button:hover {
+      background-color: #a33869;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f8f8f8;
+    }
+
+    footer p {
+      margin: 0;
+      color: #333;
+    }
+
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer img {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
+
+      nav a {
+        font-size: 0.9em;
+      }
+
+      #productos .producto {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #productos .producto {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -35,9 +237,11 @@
           <h3>Kit Facial de Arroz Bioaqua</h3>
           <p>$40.000</p>
         </a>
-        <a class="boton-compra" href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20Facial%20de%20Arroz%20de%20Bioaqua.%20precio:%20$40.000" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/24/992/992651.png" alt="Icono carrito">
-          Comprar
+        <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20Facial%20de%20Arroz%20de%20Bioaqua.%20precio:%20$40.000" target="_blank">
+          <button class="boton-compra">
+            <img src="https://cdn-icons-png.flaticon.com/24/992/992651.png" alt="Icono carrito">
+            Comprar
+          </button>
         </a>
       </div>
 
@@ -48,9 +252,11 @@
           <h3>Kit Facial Camelias Niacinamida</h3>
           <p>$35.000</p>
         </a>
-        <a class="boton-compra" href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20Facial%20Camelias%20Niacinamida.%20precio:%20$35.000" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/24/992/992651.png" alt="Icono carrito">
-          Comprar
+        <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20Facial%20Camelias%20Niacinamida.%20precio:%20$35.000" target="_blank">
+          <button class="boton-compra">
+            <img src="https://cdn-icons-png.flaticon.com/24/992/992651.png" alt="Icono carrito">
+            Comprar
+          </button>
         </a>
       </div>
 
@@ -61,11 +267,24 @@
           <h3>Kit Facial Aclarante Vitamina C</h3>
           <p>$36.000</p>
         </a>
-        <a class="boton-compra" href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20Facial%20Aclarante%20Vitamina%20C.%20precio:%20$36.000" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/24/992/992651.png" alt="Icono carrito">
-          Comprar
+        <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20Facial%20Aclarante%20Vitamina%20C.%20precio:%20$36.000" target="_blank">
+          <button class="boton-compra">
+            <img src="https://cdn-icons-png.flaticon.com/24/992/992651.png" alt="Icono carrito">
+            Comprar
+          </button>
         </a>
       </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section id="contacto" data-aos="fade-up">
+      <h2>Contáctanos</h2>
+      <form action="https://formsubmit.co/yessiradiance@gmail.com" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo electrónico" required>
+        <textarea name="mensaje" rows="4" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
     </section>
   </main>
 
@@ -84,23 +303,23 @@
     </div>
   </footer>
 
-  <!-- Chat flotante -->
-  <div id="chat-flotante" class="chat-flotante">
-    <div class="chat-header">
-      <strong>WhatsApp</strong>
-      <button onclick="document.getElementById('chat-flotante').style.display='none'">&times;</button>
+  <!-- Chat WhatsApp -->
+  <div id="chat-flotante" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background: #e0ffe5; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 9999; font-family: Arial, sans-serif; display: none;">
+    <div style="background: #25D366; color: white; padding: 12px 16px; border-top-left-radius: 20px; border-top-right-radius: 20px; display: flex; justify-content: space-between; align-items: center;">
+      <strong style="font-size: 16px;">WhatsApp</strong>
+      <button onclick="document.getElementById('chat-flotante').style.display='none'" style="background: none; border: none; color: white; font-size: 18px; cursor: pointer;">&times;</button>
     </div>
-    <div class="chat-cuerpo">
-      <p>Hola soy Yessi, asesora de Yessi Radiance.<br>Estoy aquí para ayudarte con cualquier duda que tengas.</p>
-      <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20consultar%20algunos%20de%20tus%20productos." target="_blank">
+    <div style="padding: 16px; font-size: 15px; background: white; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+      <p style="margin: 0 0 10px;">Hola soy Yessi, asesora de Yessi Radiance.<br>Estoy aquí para ayudarte con cualquier duda que tengas.</p>
+      <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20consultar%20algunos%20de%20tus%20productos." target="_blank" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; background: #25D366; color: white; padding: 10px 15px; border-radius: 12px; font-weight: bold;">
         Abrir chat
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 22px; height: 22px; margin-left: 10px;">
       </a>
     </div>
   </div>
 
-  <button onclick="document.getElementById('chat-flotante').style.display='block'" class="boton-chat">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  <button onclick="document.getElementById('chat-flotante').style.display='block'" style="position: fixed; bottom: 30px; right: 20px; background: #25D366; border: none; border-radius: 50%; width: 60px; height: 60px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 32px; height: 32px;">
   </button>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
