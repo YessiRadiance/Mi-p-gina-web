@@ -6,164 +6,122 @@
   <title>Producto 1 - Yessi Radiance</title>
   <link rel="icon" href="yessi-logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Meta SEO y Open Graph -->
   <meta name="description" content="Kit Facial de Arroz Bioaqua - hidrata y rejuvenece tu piel con ingredientes naturales. ¡Compra ahora en Yessi Radiance!">
   <meta property="og:title" content="Kit Facial de Arroz Bioaqua - Yessi Radiance">
-  <meta property="og:image" content="https://raw.githubusercontent.com/YessiRadiance/yessi-radiance/refs/heads/main/imagenes/producto1.jpg">
+  <meta property="og:image" content="https://raw.githubusercontent.com/YessiRadiance/yessi-radiance/main/imagenes/producto1.jpg">
   <meta property="og:description" content="Hidrata y rejuvenece tu piel con ingredientes naturales. ¡Compra ahora en Yessi Radiance!">
   <meta property="og:type" content="product">
-
-  <!-- AOS Animaciones -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #fff;
       margin: 0;
       padding: 0;
-      color: #333;
-      line-height: 1.6;
     }
-
     header {
       text-align: center;
-      padding: 30px 20px;
-      background: linear-gradient(to right, #fbe8ee, #fff);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-
     header img {
-      width: 140px;
-      height: 140px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 10px;
     }
-
     header h1 {
-      font-size: 2.2em;
-      color: #e89db8;
-      margin: 0;
+      font-size: 2.5em;
+      color: #333;
     }
-
     header p {
-      font-size: 1em;
+      font-size: 1.2em;
       color: #666;
-      margin-top: 5px;
     }
-
     .producto-container {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      padding: 40px 20px;
-      gap: 30px;
+      padding: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
     }
-
     .producto-imagen {
-      flex: 1 1 300px;
-      max-width: 500px;
+      width: 100%;
+      max-width: 400px;
     }
-
     .producto-imagen img {
       width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-
     .producto-detalles {
-      flex: 1 1 300px;
       max-width: 500px;
     }
-
     .producto-detalles h2 {
-      color: #c7568a;
-      font-size: 1.8em;
-      margin-bottom: 10px;
+      color: #f3c6d2;
+      margin-top: 0;
     }
-
     .producto-detalles p {
-      font-size: 1em;
-      color: #444;
-      margin-bottom: 10px;
-    }
-
-    .producto-detalles div {
-      background-color: #fef3f7;
-      border-left: 5px solid #e89db8;
-      padding: 15px 20px;
+      font-size: 1.1em;
+      color: #333;
       margin-bottom: 15px;
-      border-radius: 10px;
     }
-
+    .producto-detalles ul,
+    .producto-detalles ol {
+      margin-bottom: 15px;
+      padding-left: 20px;
+      color: #444;
+    }
     .boton-compra {
-      background-color: #e89db8;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 10px;
-      color: #fff;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 1em;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease, background-color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #25D366;
+      color: white;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
     }
-
+    .boton-compra img {
+      width: 20px;
+      height: 20px;
+    }
     .boton-compra:hover {
-      background-color: #d27fa3;
-      transform: scale(1.05);
+      background-color: #1ebe5d;
     }
-
     footer {
       text-align: center;
-      padding: 25px 15px;
+      padding: 20px;
       background-color: #fdfdfd;
+      margin-top: 30px;
       font-size: 0.9em;
       color: #555;
-      margin-top: 40px;
     }
-
     footer div {
-      margin-top: 12px;
+      margin-top: 10px;
     }
-
     footer a {
-      margin: 0 10px;
+      margin: 0 8px;
       display: inline-block;
-      transition: transform 0.2s ease;
     }
-
-    footer a:hover {
-      transform: scale(1.2);
-    }
-
     footer img {
       vertical-align: middle;
     }
-
     @media (max-width: 768px) {
       .producto-container {
         flex-direction: column;
         align-items: center;
       }
-
-      .producto-imagen,
-      .producto-detalles {
-        max-width: 100%;
+      .producto-imagen, .producto-detalles {
+        width: 100%;
       }
     }
   </style>
 </head>
-
 <body>
   <header>
     <img src="yessi-logo.jpg" alt="Logo Yessi Radiance" />
@@ -173,42 +131,31 @@
 
   <div class="producto-container">
     <div class="producto-imagen">
-      <img src="https://raw.githubusercontent.com/YessiRadiance/yessi-radiance/refs/heads/main/imagenes/producto1.jpg" alt="Producto 1" />
+      <img src="https://raw.githubusercontent.com/YessiRadiance/yessi-radiance/main/imagenes/producto1.jpg" alt="Producto 1" />
     </div>
     <div class="producto-detalles">
       <h2>Kit Facial de Arroz Bioaqua</h2>
       <p><strong>Precio:</strong> $40.000</p>
       <p><strong>Descripción:</strong> El arroz ha sido utilizado en la cultura asiática como uno de los principales secretos de belleza, gracias a sus propiedades aclarantes y reparadoras. Enriquecido con almidón y vitaminas E y B, provee un efecto antioxidante que ayuda a prevenir el envejecimiento prematuro de la piel.</p>
+      <p><strong>Beneficios:</strong></p>
+      <ul>
+        <li>Previene líneas de expresión</li>
+        <li>Atenúa manchas</li>
+        <li>Evita irritaciones</li>
+        <li>Ayuda a combatir el acné</li>
+      </ul>
 
-      <h3>¿Cómo usarlo?</h3>
+      <p><strong>Modo de uso:</strong></p>
+      <ol>
+        <li><strong>Jabón facial:</strong> limpia, refresca e hidrata.</li>
+        <li><strong>Mascarilla de velo:</strong> aclara y suaviza la piel.</li>
+        <li><strong>Suero de arroz:</strong> minimiza poros, nutre y mejora la textura.</li>
+        <li><strong>Contorno de ojos:</strong> reduce ojeras y líneas finas.</li>
+        <li><strong>Crema hidratante:</strong> unifica el tono y repara la piel.</li>
+      </ol>
 
-      <div data-aos="fade-up">
-        <p><strong>1. Jabón Facial</strong> 🧼<br>
-        Limpia, hidrata y elimina impurezas para una piel fresca y radiante.</p>
-      </div>
-
-      <div data-aos="fade-up" data-aos-delay="100">
-        <p><strong>2. Mascarilla de Velo</strong> 🧖‍♀️<br>
-        Aporta luminosidad, suaviza y aclara la piel. Ideal para todo tipo de piel.</p>
-      </div>
-
-      <div data-aos="fade-up" data-aos-delay="200">
-        <p><strong>3. Suero de Arroz</strong> 💧<br>
-        Minimiza poros, nutre intensamente y restaura la elasticidad.</p>
-      </div>
-
-      <div data-aos="fade-up" data-aos-delay="300">
-        <p><strong>4. Contorno de Ojos</strong> 👁<br>
-        Hidrata, reduce ojeras y líneas finas, mejora la apariencia del contorno.</p>
-      </div>
-
-      <div data-aos="fade-up" data-aos-delay="400">
-        <p><strong>5. Crema Hidratante</strong> 🧴<br>
-        Repara intensamente, unifica el tono y mantiene la piel saludable.</p>
-      </div>
-
-      <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20facial%20de%20Arroz%20de%20Bioaqua%20-%20$40.000%20Imagen:%20https://raw.githubusercontent.com/YessiRadiance/yessi-radiance/refs/heads/main/imagenes/producto1.jpg" target="_blank">
-        <button class="boton-compra" aria-label="Comprar por WhatsApp">Comprar</button>
+      <a class="boton-compra" href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20facial%20de%20Arroz%20de%20Bioaqua%20-%20$40.000%20Imagen:%20https://raw.githubusercontent.com/YessiRadiance/yessi-radiance/main/imagenes/producto1.jpg" target="_blank" aria-label="Comprar por WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> Comprar por WhatsApp
       </a>
     </div>
   </div>
