@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos - Yessi Radiance</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    /* Estilos para los productos */
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      background: #fffafc;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #333;
+    }
+
+    header p {
+      color: #666;
+      font-size: 1.2em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f3c6d2;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #e89db8;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    #productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .producto {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .producto img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .producto h3 {
+      margin: 15px 0 10px;
+      color: #333;
+    }
+
+    .producto p {
+      color: #666;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    .boton-compra {
+      background-color: #f3c6d2;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .boton-compra:hover {
+      background-color: #e89db8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f3f3f3;
+      font-size: 1em;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="yessi-logo.jpg" alt="Logo Yessi Radiance" loading="lazy" />
+    <h1>Yessi Radiance</h1>
+    <p>Explora nuestros productos</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <main>
+    <section id="productos">
+      <h2 style="text-align: center;">Todos los Productos</h2>
+
+      <!-- Producto 1 -->
+<div class="producto" data-aos="fade-up">
+  <a href="producto1.html">
+    <img src="imagenes/producto1.jpg" alt="Kit Facial de Arroz Bioaqua - Yessi Radiance" loading="lazy" />
+    <h3>Kit Facial de Arroz Bioaqua</h3>
+    <p>$40.000</p>
+  </a>
+  <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20Facial%20de%20Arroz%20de%20Bioaqua.%20precio:%20$40.000" target="_blank">
+    <button class="boton-compra">Comprar</button>
+  </a>
+</div>
+
+      <!-- Producto 2 -->
+      <div class="producto" data-aos="fade-up">
+        <img src="imagenes/producto2.jpg" alt="Kit Facial con Camelias y Niacinamida - Yessi Radiance" loading="lazy" />
+        <h3>Kit Facial Camelias Niacinamida</h3>
+        <p>$35.000</p>
+        <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20Facial%20Camelias%20Niacinamida.%20precio:%20$35.000" target="_blank">
+          <button class="boton-compra">Comprar</button>
+        </a>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="producto" data-aos="fade-up">
+        <img src="imagenes/producto3.jpg" alt="Kit Facial Aclarante con Vitamina C - Yessi Radiance" loading="lazy" />
+        <h3>Kit Facial Aclarante Vitamina C</h3>
+        <p>$36.000</p>
+        <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20Facial%20Aclarante%20Vitamina%20C.%20precio:%20$36.000" target="_blank">
+          <button class="boton-compra">Comprar</button>
+        </a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Yessi Radiance. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Chat estilo Tienda PRAMA -->
+  <div id="chat-flotante" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background: #e0ffe5; border-radius: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); z-index: 9999; font-family: Arial, sans-serif; display: none;">
+    <div style="background: #25D366; color: white; padding: 12px 16px; border-top-left-radius: 20px; border-top-right-radius: 20px; display: flex; justify-content: space-between; align-items: center;">
+      <strong style="font-size: 16px;">WhatsApp</strong>
+      <button onclick="document.getElementById('chat-flotante').style.display='none'" style="background: none; border: none; color: white; font-size: 18px; cursor: pointer;">&times;</button>
+    </div>
+    <div style="padding: 16px; font-size: 15px; background: white; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+      <p style="margin: 0 0 10px;">Hola soy Yessi, asesora de Yessi Radiance.<br>Estoy aquí para ayudarte con cualquier duda que tengas.</p>
+      <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20consultar%20algunos%20de%20tus%20productos." target="_blank" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; background: #25D366; color: white; padding: 10px 15px; border-radius: 12px; font-weight: bold;">
+        Abrir chat
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 22px; height: 22px; margin-left: 10px;">
+      </a>
+    </div>
+  </div>
+
+  <button onclick="document.getElementById('chat-flotante').style.display='block'" style="position: fixed; bottom: 30px; right: 20px; background: #25D366; border: none; border-radius: 50%; width: 60px; height: 60px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 32px; height: 32px;">
+  </button>
+  
+</body>
+<!-- Botón de Inicio flotante a la izquierda -->
+<a href="#inicio" class="boton-inicio" title="Volver al inicio">
+  <img src="https://cdn-icons-png.flaticon.com/512/892/892692.png" alt="Inicio">
+</a>
+
+<style>
+  .boton-inicio {
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    background-color: #f3c6d2;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rebote 2s infinite;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  .boton-inicio:hover {
+    background-color: #e89db8;
+    transform: scale(1.1);
+  }
+
+  .boton-inicio img {
+    width: 28px;
+    height: 28px;
+  }
+
+  @keyframes rebote {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+</style>
+</html>
