@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yessi Radiance</title>
+  <link rel="icon" href="yessi-logo.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #fffafc, #fff);
+      background-image: url('imagenes/patron-rosado-suave.png');
+      background-repeat: repeat;
+      background-size: 280px;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 4px solid #f3c6d2;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #333;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #666;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #f3c6d2;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #e89db8;
+    }
+
+    .boton-compra {
+      background-color: #f3c6d2;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      margin-top: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .boton-compra img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .boton-compra:hover {
+      background-color: #e89db8;
+      transform: scale(1.05);
+    }
+
+    #productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    #productos .producto {
+      width: 160px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    #productos .producto:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    #productos img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f8f8f8;
+    }
+
+    footer p {
+      margin: 0;
+      color: #333;
+    }
+
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer img {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Llamada a la atención (CTA) */
+    .cta {
+      background-color: #f3c6d2;
+      text-align: center;
+      padding: 40px;
+      margin-top: 40px;
+      border-radius: 10px;
+    }
+
+    .cta h2 {
+      font-size: 2.5em;
+      color: #333;
+    }
+
+    .cta p {
+      font-size: 1.2em;
+      color: #666;
+    }
+
+    .cta-button {
+      background-color: #25D366;
+      padding: 15px 25px;
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #1e9b56;
+    }
+
+    /* Testimonios */
+    .testimonios {
+      background-color: #f8f8f8;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .testimonio {
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    .testimonio h3 {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Beneficios */
+    .beneficios {
+      background-color: #fff;
+      padding: 40px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .beneficio {
+      margin-bottom: 30px;
+    }
+
+    .beneficio h3 {
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .beneficio p {
+      font-size: 1.1em;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
+
+      nav a {
+        font-size: 0.9em;
+      }
+
+      #productos .producto {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #productos .producto {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="inicio">
+    <img src="yessi-logo.jpg" alt="Logo redondo de Yessi Radiance con fondo rosado claro" loading="lazy" />
+    <h1>Yessi Radiance</h1>
+    <p>Nutre tu piel, ilumina tu esencia</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="productos.html" target="_blank">Productos</a> 
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <main>
+    <section id="productos">
+      <h2 style="text-align: center;">Productos Destacados</h2>
+      
+      <!-- Producto 1 -->
+      <div class="producto" data-aos="fade-up">
+        <a href="productos.html#producto1" target="_blank">
+          <img src="imagenes/producto1.jpg" alt="Kit Facial de Arroz Bioaqua - Yessi Radiance" loading="lazy" />
+          <h3>Kit Facial de Arroz Bioaqua</h3>
+          <p>$40.000</p>
+        </a>
+        <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20Facial%20de%20Arroz%20de%20Bioaqua.%20precio:%20$40.000" target="_blank">
+          <button class="boton-compra">
+            <img src="https://cdn-icons-png.flaticon.com/24/992/992651.png" alt="Icono carrito">Comprar
+          </button>
+        </a>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="producto" data-aos="fade-up">
+        <a href="productos.html#producto2" target="_blank">
+          <img src="imagenes/producto2.jpg" alt="Kit Facial con Camelias y Niacinamida - Yessi Radiance" loading="lazy" />
+          <h3>Kit Facial Camelias Niacinamida</h3>
+          <p>$35.000</p>
+        </a>
+        <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20Facial%20Camelias%20Niacinamida.%20precio:%20$35.000" target="_blank">
+          <button class="boton-compra">
+            <img src="https://cdn-icons-png.flaticon.com/24/992/992651.png" alt="Icono carrito">Comprar
+          </button>
+        </a>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="producto" data-aos="fade-up">
+        <a href="productos.html#producto3" target="_blank">
+          <img src="imagenes/producto3.jpg" alt="Kit Facial Aclarante con Vitamina C - Yessi Radiance" loading="lazy" />
+          <h3>Kit Facial Aclarante Vitamina C</h3>
+          <p>$36.000</p>
+        </a>
+        <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20Facial%20Aclarante%20Vitamina%20C.%20precio:%20$36.000" target="_blank">
+          <button class="boton-compra">
+            <img src="https://cdn-icons-png.flaticon.com/24/992/992651.png" alt="Icono carrito">Comprar
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- Llamada a la Atención -->
+    <section class="cta">
+      <h2>¡Transforma tu piel hoy!</h2>
+      <p>Descubre nuestros productos especialmente diseñados para ti. Da el primer paso hacia una piel más saludable y radiante.</p>
+      <a href="productos.html" class="cta-button">Ver Productos</a>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonios">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="testimonio">
+        <p>"He estado usando el Kit Facial de Arroz Bioaqua y mi piel nunca se ha sentido tan suave y radiante. ¡Totalmente recomendable!"</p>
+        <h3>- Laura García</h3>
+      </div>
+      <div class="testimonio">
+        <p>"Desde que comencé a usar los productos de Yessi Radiance, mi piel se ve más clara y fresca. ¡Me encanta!"</p>
+        <h3>- Ana Martínez</h3>
+      </div>
+    </section>
+
+    <!-- Beneficios del Producto -->
+    <section class="beneficios">
+      <h2>Beneficios de nuestros productos</h2>
+      <div class="beneficio">
+        <h3>Hidratación profunda</h3>
+        <p>Todos nuestros productos están diseñados para hidratar tu piel, dejándola suave y saludable todo el día.</p>
+      </div>
+      <div class="beneficio">
+        <h3>Ingredientes naturales</h3>
+        <p>Utilizamos solo los mejores ingredientes naturales, perfectos para todo tipo de piel.</p>
+      </div>
+      <div class="beneficio">
+        <h3>Resultados visibles</h3>
+        <p>Verás resultados desde las primeras aplicaciones, con una piel más luminosa y renovada.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Yessi Radiance. Todos los derechos reservados.</p>
+    <div>
+      <a href="https://www.instagram.com/yessiradiance?igsh=bnhzcTFibmtldDV6" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/24/1384/1384063.png" alt="Instagram">
+      </a>
+      <a href="https://facebook.com/yessi_radiance" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
