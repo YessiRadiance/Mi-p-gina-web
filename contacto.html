@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Contacto - Yessi Radiance</title>
   <link rel="stylesheet" href="style.css" />
@@ -101,19 +101,61 @@
 
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem;
       background-color: #333;
       color: white;
     }
 
-    .social-icons a img {
-      width: 24px;
-      margin: 0 8px;
-      vertical-align: middle;
+    .social-icons {
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      filter: brightness(0) invert(1);
+    }
+
+    /* Modal */
+    #modal-confirmacion {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-contenido {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 400px;
+      text-align: center;
+      animation: fadeInZoom 0.4s ease forwards;
+    }
+
+    .modal-contenido img {
+      width: 60px;
+      margin-bottom: 1rem;
+    }
+
+    @keyframes fadeInZoom {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
 <body>
+
   <header>
     <img src="yessi-logo.jpg" alt="Yessi Radiance">
     <h1>Contacto</h1>
@@ -123,17 +165,7 @@
   <main>
     <section id="contacto-formulario">
       <h2>Formulario de Contacto</h2>
-
-      <!-- MENSAJE DE CONFIRMACIÓN -->
-      <div id="confirmacion" style="display:none; text-align:center; color: green; font-weight: bold; margin-bottom: 1rem;">
-        ¡Gracias por tu mensaje! Te responderemos pronto.
-      </div>
-
-      <form id="formulario-contacto" action="https://formsubmit.co/yessiradiance@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://yessiradiance.github.io/yessi-radiance/gracias.html">
-        <input type="text" name="_honey" style="display:none">
-
+      <form id="form-contacto" action="mailto:yessiradiance@gmail.com" method="post" enctype="text/plain" onsubmit="mostrarModal(event)">
         <div>
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" required />
@@ -156,15 +188,35 @@
     </section>
   </main>
 
+  <!-- Modal de confirmación -->
+  <div id="modal-confirmacion">
+    <div class="modal-contenido">
+      <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Flor decorativa">
+      <h3>¡Gracias por tu mensaje!</h3>
+      <p>Pronto recibirás una respuesta de nuestro equipo.</p>
+      <button id="btn-confirmar-envio">Aceptar</button>
+    </div>
+  </div>
+
   <footer>
     <p>&copy; 2025 Yessi Radiance. Todos los derechos reservados.</p>
     <div class="social-icons">
-      <a href="https://instagram.com/yessiradiance" target="_blank"><img src="imagenes/instagram-icon.png" alt="Instagram"></a>
-      <a href="https://facebook.com/yessiradiance" target="_blank"><img src="imagenes/facebook-icon.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/yessiradiance" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+      </a>
+      <a href="https://wa.me/573197438544" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+      </a>
+      <a href="mailto:yessiradiance@gmail.com">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+      </a>
+      <a href="#">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+      </a>
     </div>
   </footer>
-  
-  <!-- Chat estilo Tienda PRAMA -->
+
+  <!-- Botón flotante de WhatsApp -->
   <div id="chat-flotante" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background: #e0ffe5; border-radius: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); z-index: 9999; font-family: Arial, sans-serif; display: none;">
     <div style="background: #25D366; color: white; padding: 12px 16px; border-top-left-radius: 20px; border-top-right-radius: 20px; display: flex; justify-content: space-between; align-items: center;">
       <strong style="font-size: 16px;">WhatsApp</strong>
@@ -183,14 +235,20 @@
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 32px; height: 32px;">
   </button>
 
-  <!-- VALIDACIÓN VISUAL EN TIEMPO REAL -->
   <script>
-    const inputs = document.querySelectorAll('input, textarea');
-    inputs.forEach(input => {
-      input.addEventListener('input', () => {
-        input.style.borderColor = input.checkValidity() ? '#27ae60' : '#e74c3c';
-      });
-    });
+    function mostrarModal(e) {
+      e.preventDefault();
+      document.getElementById("modal-confirmacion").style.display = "flex";
+
+      document.getElementById("btn-confirmar-envio").onclick = () => {
+        document.getElementById("form-contacto").submit();
+      };
+
+      setTimeout(() => {
+        document.getElementById("form-contacto").submit();
+      }, 5000);
+    }
   </script>
+
 </body>
 </html>
