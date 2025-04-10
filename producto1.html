@@ -7,6 +7,9 @@
   <link rel="icon" href="yessi-logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <!-- Meta SEO y Open Graph -->
   <meta name="description" content="Kit Facial de Arroz Bioaqua - hidrata y rejuvenece tu piel con ingredientes naturales. ¡Compra ahora en Yessi Radiance!">
   <meta property="og:title" content="Kit Facial de Arroz Bioaqua - Yessi Radiance">
@@ -14,109 +17,139 @@
   <meta property="og:description" content="Hidrata y rejuvenece tu piel con ingredientes naturales. ¡Compra ahora en Yessi Radiance!">
   <meta property="og:type" content="product">
 
+  <!-- AOS Animaciones -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #fff;
       margin: 0;
       padding: 0;
+      color: #333;
+      line-height: 1.6;
     }
 
     header {
       text-align: center;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 30px 20px;
+      background: linear-gradient(to right, #fbe8ee, #fff);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     header img {
-      width: 160px;
-      height: 160px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 10px;
     }
 
     header h1 {
-      font-size: 2.5em;
-      color: #333;
+      font-size: 2.2em;
+      color: #e89db8;
+      margin: 0;
     }
 
     header p {
-      font-size: 1.2em;
+      font-size: 1em;
       color: #666;
+      margin-top: 5px;
     }
 
     .producto-container {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      padding: 20px;
-      gap: 20px;
+      padding: 40px 20px;
+      gap: 30px;
     }
 
     .producto-imagen {
-      width: 50%;
+      flex: 1 1 300px;
+      max-width: 500px;
     }
 
     .producto-imagen img {
       width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
     .producto-detalles {
-      width: 40%;
+      flex: 1 1 300px;
+      max-width: 500px;
     }
 
     .producto-detalles h2 {
-      color: #f3c6d2;
-      margin-top: 0;
+      color: #c7568a;
+      font-size: 1.8em;
+      margin-bottom: 10px;
     }
 
     .producto-detalles p {
-      font-size: 1.1em;
-      color: #333;
+      font-size: 1em;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .producto-detalles div {
+      background-color: #fef3f7;
+      border-left: 5px solid #e89db8;
+      padding: 15px 20px;
       margin-bottom: 15px;
+      border-radius: 10px;
     }
 
     .boton-compra {
-      background-color: #f3c6d2;
+      background-color: #e89db8;
       border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      color: white;
-      font-weight: bold;
+      padding: 12px 24px;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: 600;
       cursor: pointer;
-      transition: background-color 0.3s;
+      font-size: 1em;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, background-color 0.3s ease;
     }
 
     .boton-compra:hover {
-      background-color: #e89db8;
+      background-color: #d27fa3;
+      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px 15px;
       background-color: #fdfdfd;
-      margin-top: 30px;
       font-size: 0.9em;
       color: #555;
+      margin-top: 40px;
     }
 
     footer div {
-      margin-top: 10px;
+      margin-top: 12px;
     }
 
     footer a {
-      margin: 0 8px;
+      margin: 0 10px;
       display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    footer a:hover {
+      transform: scale(1.2);
     }
 
     footer img {
       vertical-align: middle;
     }
 
-    /* Responsivo */
     @media (max-width: 768px) {
       .producto-container {
         flex-direction: column;
@@ -125,8 +158,7 @@
 
       .producto-imagen,
       .producto-detalles {
-        width: 100%;
-        padding: 0;
+        max-width: 100%;
       }
     }
   </style>
@@ -146,40 +178,35 @@
     <div class="producto-detalles">
       <h2>Kit Facial de Arroz Bioaqua</h2>
       <p><strong>Precio:</strong> $40.000</p>
-      <p><strong>Descripción:</strong>El arroz ha sido utilizado en la cultura asiática como uno de los principales secretos de belleza, gracias a sus propiedades aclarantes y reparadoras.
+      <p><strong>Descripción:</strong> El arroz ha sido utilizado en la cultura asiática como uno de los principales secretos de belleza, gracias a sus propiedades aclarantes y reparadoras. Enriquecido con almidón y vitaminas E y B, provee un efecto antioxidante que ayuda a prevenir el envejecimiento prematuro de la piel.</p>
 
-Enriquecido con almidón y vitaminas E y B, provee un efecto antioxidante que ayuda a prevenir el envejecimiento prematuro de la piel.
+      <h3>¿Cómo usarlo?</h3>
 
-Perfecto aliado para prevenir y disimular las líneas de expresión, atenuar las manchas del rostro, evitar irritaciones en la piel, e incluso puede ayudar a combatir el acné.</p>
-      <p><strong>Uso:</strong>PASO 1: JABÓN FACIAL
+      <div data-aos="fade-up">
+        <p><strong>1. Jabón Facial</strong> 🧼<br>
+        Limpia, hidrata y elimina impurezas para una piel fresca y radiante.</p>
+      </div>
 
-Solución suave y limpiadora.
-Refresca la piel y la hidrata.
-Ayuda a aclarar y dar más brillo a la piel.
-Remueve impurezas y piel muerta.
-PASO 2: MASCARILLA DE VELO
+      <div data-aos="fade-up" data-aos-delay="100">
+        <p><strong>2. Mascarilla de Velo</strong> 🧖‍♀️<br>
+        Aporta luminosidad, suaviza y aclara la piel. Ideal para todo tipo de piel.</p>
+      </div>
 
-Ideal para todo tipo de piel
-Aporta luminosidad
-Aclara
-Suaviza la piel
-PASO 3: SUERO DE ARROZ
+      <div data-aos="fade-up" data-aos-delay="200">
+        <p><strong>3. Suero de Arroz</strong> 💧<br>
+        Minimiza poros, nutre intensamente y restaura la elasticidad.</p>
+      </div>
 
-Serum facial para minimizar los poros, hecho con extracto de germen de arroz.
-Deja la piel supersuave y uniforme.
-Elimina la aspereza de la piel.
-Deja que la piel absorba la humedad y la nutrición, acondiciona la piel, mantiene la piel con balance de humedad, mejora la aspereza de la piel causada por la falta de sequedad de humedad, mejora la piel aportando hidratación, restaura la elasticidad de la piel.
-PASO 4: CONTORNO DE OJOS
+      <div data-aos="fade-up" data-aos-delay="300">
+        <p><strong>4. Contorno de Ojos</strong> 👁<br>
+        Hidrata, reduce ojeras y líneas finas, mejora la apariencia del contorno.</p>
+      </div>
 
-Hidrata la piel y reduce la inflamación
-Reduce ojeras y manchas oscuras alrededor de los ojos
-Mejora de la apariencia de las líneas finas y arrugas
-Contiene propiedades aclarantes
-PASO 5: CREMA HIDRATANTE
+      <div data-aos="fade-up" data-aos-delay="400">
+        <p><strong>5. Crema Hidratante</strong> 🧴<br>
+        Repara intensamente, unifica el tono y mantiene la piel saludable.</p>
+      </div>
 
-Repone la humedad de la piel
-Hidrata y repara intensamente
-Unifica y aclara el tono de la piel</p>
       <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20facial%20de%20Arroz%20de%20Bioaqua%20-%20$40.000%20Imagen:%20https://raw.githubusercontent.com/YessiRadiance/yessi-radiance/refs/heads/main/imagenes/producto1.jpg" target="_blank">
         <button class="boton-compra" aria-label="Comprar por WhatsApp">Comprar</button>
       </a>
