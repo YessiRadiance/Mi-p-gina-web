@@ -145,16 +145,16 @@
       <h2 style="text-align: center;">Todos los Productos</h2>
 
       <!-- Producto 1 -->
-<div class="producto" data-aos="fade-up">
-  <a href="producto1.html">
-    <img src="imagenes/producto1.jpg" alt="Kit Facial de Arroz Bioaqua - Yessi Radiance" loading="lazy" />
-    <h3>Kit Facial de Arroz Bioaqua</h3>
-    <p>$40.000</p>
-  </a>
-  <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20Facial%20de%20Arroz%20de%20Bioaqua.%20precio:%20$40.000" target="_blank">
-    <button class="boton-compra">Comprar</button>
-  </a>
-</div>
+      <div class="producto" data-aos="fade-up">
+        <a href="producto1.html">
+          <img src="imagenes/producto1.jpg" alt="Kit Facial de Arroz Bioaqua - Yessi Radiance" loading="lazy" />
+          <h3>Kit Facial de Arroz Bioaqua</h3>
+          <p>$40.000</p>
+        </a>
+        <a href="https://wa.me/573197438544?text=Hola%20Yessi%2C%20quiero%20comprar%20el%20Kit%20Facial%20de%20Arroz%20de%20Bioaqua.%20precio:%20$40.000" target="_blank">
+          <button class="boton-compra">Comprar</button>
+        </a>
+      </div>
 
       <!-- Producto 2 -->
       <div class="producto" data-aos="fade-up">
@@ -187,6 +187,16 @@
   <script>
     AOS.init();
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mostrar botón de subir al hacer scroll
+    window.addEventListener("scroll", function () {
+      const btn = document.getElementById("btn-subir");
+      if (window.scrollY > 300) {
+        btn.style.display = "flex";
+      } else {
+        btn.style.display = "none";
+      }
+    });
   </script>
 
   <!-- Chat estilo Tienda PRAMA -->
@@ -207,49 +217,14 @@
   <button onclick="document.getElementById('chat-flotante').style.display='block'" style="position: fixed; bottom: 30px; right: 20px; background: #25D366; border: none; border-radius: 50%; width: 60px; height: 60px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; cursor: pointer; display: flex; align-items: center; justify-content: center;">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 32px; height: 32px;">
   </button>
-  
+
+  <!-- Botón flotante para volver arriba -->
+  <button id="btn-subir"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    style="position: fixed; bottom: 100px; right: 90px; background: #f3c6d2; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 999; cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 22px;">
+    ↑
+  </button>
+
 </body>
-<!-- Botón de Inicio flotante a la izquierda -->
-<a href="#inicio" class="boton-inicio" title="Volver al inicio">
-  <img src="https://cdn-icons-png.flaticon.com/512/892/892692.png" alt="Inicio">
-</a>
 
-<style>
-  .boton-inicio {
-    position: fixed;
-    bottom: 30px;
-    left: 20px;
-    background-color: #f3c6d2;
-    border: none;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: rebote 2s infinite;
-    transition: transform 0.3s, background-color 0.3s;
-  }
-
-  .boton-inicio:hover {
-    background-color: #e89db8;
-    transform: scale(1.1);
-  }
-
-  .boton-inicio img {
-    width: 28px;
-    height: 28px;
-  }
-
-  @keyframes rebote {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-6px);
-    }
-  }
-</style>
 </html>
