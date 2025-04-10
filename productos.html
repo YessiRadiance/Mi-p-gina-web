@@ -209,5 +209,47 @@
   </button>
   
 </body>
+<!-- Botón de Inicio flotante a la izquierda -->
+<a href="#inicio" class="boton-inicio" title="Volver al inicio">
+  <img src="https://cdn-icons-png.flaticon.com/512/892/892692.png" alt="Inicio">
+</a>
 
+<style>
+  .boton-inicio {
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    background-color: #f3c6d2;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rebote 2s infinite;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  .boton-inicio:hover {
+    background-color: #e89db8;
+    transform: scale(1.1);
+  }
+
+  .boton-inicio img {
+    width: 28px;
+    height: 28px;
+  }
+
+  @keyframes rebote {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+</style>
 </html>
